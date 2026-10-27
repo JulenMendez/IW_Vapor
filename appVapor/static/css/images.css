@@ -2,3 +2,13 @@
     width : 940px;
     height: 125px;
 }
+
+.categorySmallImg{
+    height: 219px;
+    width: 226px;
+}
+
+.categoryBigImg{
+    height: 219px;
+    width: 468px;
+}
