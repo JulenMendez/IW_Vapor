@@ -116,13 +116,68 @@
         <h2>Buttons</h2>
         <!--There are 3 types: primary, secondary and tertiary, where the only differences is the looks. There are also 3 posible
         sizes; sm, lg and adding nothing extra, which is the "normal" one-->
+
+        <!--NOTE: inside a page, elements should be grouped in "container" divs.-->
         <div class="container">
             <button class="btn btn-primary btn-lg">PLAY</button>
             <button class="btn btn-secondary btn">STOP</button>
             <button class="btn btn-tertiary btn-sm">Shop</button>
         </div>
 
-        
+        <!--Cards-->
+        <!--Cards come in a variety of flavours, those being normal ones, small ones and the ones with gradients-->
+        <h2>Cards</h2>
+        <!--normal card-->
+        <div class="container mb-40">
+            <div class="card">
+                <a href="#">  <!--First comes the image of the card-->
+                    <img src="https://placehold.co/306x350" alt="Card Image" class="card-img">
+                </a>
+                <!--Then the body comes, which contains the text information-->
+                <div class="card-body">
+                    <!--You add title, then a text-->
+                    <h5 class="card-title">Card normal</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, ullam!</p>
+                    
+                    <!--when creating a card, price can be stated as a discount.-->
+                    <div class="card-price">
+                        <div class="card-price-discount">-60%</div> <!--the discounted amount-->
+                        <div class="card-discount-prices">
+                            <span class="card-price-original">19,99€</span> <!--the og price-->
+                            <span class="card-price-new">7,99€</span> <!--the new price-->
+                        </div>
+                        <a href="#" class="btn btn-card">View in Shop</a> <!--buttons can be added as well, although it is reccomended
+                        to only have either a price, or a button, not both at the same time-->
+                    </div>
+                    </div>
+                </div>
+            <!--small card-->
+            <div class="card card-sm">
+                <a href="#">
+                    <img src="https://placehold.co/230x110" alt="Card Image" class="card-img">
+                </a>
+                <div class="card-body">
+                    <div class="card-price">
+                        <span class="card-pricetag">Free</span> <!--This is a way to show the price normally-->
+                    </div>
+                </div>
+            </div>
+            
+            <!--Card gradients-->
+            <!--NOTE: in gradients there are styles. If someone wants to use a gradient card, communicate the team about how you managed it,
+            as the style should be done in a css.-->
+            <div class="card card-gradient" style="--card-gradient-color: rgb(139,0,0)">
+                <a href="#">
+                    <img src="https://placehold.co/226x219" alt="Card Image">
+                    <div class="card-body">
+                        <h5 class="card-title">ROLEPLAY</h5>
+                    </div>
+                </a>
+            </div>
+
+            </div>
+            <!--NOTE: if you want 2 cards to be piled up, put both of them in a classless div.-->
+            
         <!--BANNER-->
         <!--Important note: the total width of the elements inside of the banner div should total 940px. If a different size is wanted, 
         ask the team to change the width of the page container, or to create another one with bigger size-->
@@ -140,8 +195,10 @@
             <a href="#">
                 <img src="https://placehold.co/314x125" alt="banner img">
             </a>
-        </div>
-    </div>    
+        </div>  
+    </div>
+
+        
 
 </body>
 
