@@ -1,25 +1,30 @@
 .banner {
-    overflow: hidden;
+    overflow: hidden; /*This property controls what happens to content that is too big to fit into an area. With
+    hidden we say that the overflow is clipped, and the rest will be hidden*/
     width: 100%;
     padding: 20px 2%;
 }
 
 .banner a{
-    display: block;
-    transition: box-shadow .1s ease-in-out;
+    display: block; /*Cover the whole line*/
+    transition: box-shadow .1s ease-in-out; /*This plays a small animation. It makes a smooth transition from having nothing to having the box shadow.
+    writing ease-in-out means the animation will play when the shadow is "moving in" AND "moving out".*/
 }
 
 .banner a:hover{
-    box-shadow: 0 0 12px var(--banner-shadow);
+    box-shadow: 0 0 12px var(--banner-shadow); /* offset-x | offset-y | blur-radius | color */
 }
 
 .banner.banner-grid {
-    display: flex;
-    justify-content: space-between;
+    display: flex; /*From left to right fill the hole line*/
+    justify-content: space-between;/*Distribute items equally: the first one at the beginning, and the last one at the end.*/
+
 }
 
-@media only screen and (max-width: 950px) {
-    .banner a img {
+@media only screen and (max-width: 950px) { /*If the width of the viewport is lower or equal to 950,*/
+    /*the image from a will take all of the space. this measure ensures that the banner will not be out of screen: 
+    it'll simply be smaller.*/
+    .banner a img { 
         width: 100%;
     }
     .banner.banner-grid a img {

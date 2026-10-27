@@ -1,7 +1,7 @@
-@import url('./css/main.css');
-@import url('./css/__buttons.css');
-@import url('./css/__navbar.css');
-@import url('./css/__menubar.css');
-@import url('./css/__card.css');
-@import url('./css/__carousel.css');
-@import url('./css/__banner.css');
+@import url('./main.css');
+@import url('./__buttons.css');
+@import url('./__navbar.css');
+@import url('./__menubar.css');
+@import url('./__card.css');
+@import url('./__carousel.css');
+@import url('./__banner.css');

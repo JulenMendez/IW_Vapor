@@ -5,17 +5,19 @@
     letter-spacing: .05rem;
     text-transform: uppercase;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /*With this, items will wrap; they will not adjust to fit all the items in the line. Instead, they will jump to the next line*/
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between; /*Items will have space between them*/
     position: relative;
     padding-inline: 16px;
-    z-index: 150;
+    z-index: 150;/*The z-index property specifies the stack order of an element.
+    An element with greater stack order is always in front of an element with a lower stack order.
+    This appears to organize appearance of the navbar-dropdown, so that this stays behind*/
 }
 
 .navbar-container {
     display: flex;
-    flex-wrap: inherit;
+    flex-wrap: inherit; /*Inherits the wrap from the parent*/
     align-items: center;
     justify-content: left;
     margin: 0 auto;
@@ -29,7 +31,7 @@
 }
 
 .navbar-nav {
-    list-style: none;
+    list-style: none; /*Remove the list markers*/
     display: flex;
     align-items: center;
     padding: 0;
@@ -40,7 +42,7 @@
     font-weight: bold;
     padding: 0.5rem;
     text-align: center;
-    transition: color .1s linear;
+    transition: color .1s linear; /*linear means that no smoothing will be applied*/
 }
 
 .navbar-item:hover {
@@ -76,7 +78,7 @@
     min-width: 125px;
     opacity: 0;
     visibility: hidden;
-    transition: visibility 0s linear .2s,opacity .2s linear;
+    transition: visibility 0s linear .2s,opacity .2s linear; /*transition from non visible to visible wit some opacity*/
 }
 
 .navbar-item:hover .navbar-dropdown{
@@ -103,12 +105,15 @@
 
 /* responsive behavior */
 
-.navbar-toggler {
-    cursor: pointer;
+/*IMPORTANT: all of this functionality will happen to adjust for the case of the width of the screen being 720 or lower*/
+
+.navbar-toggler { 
+    cursor: pointer; /*Transforms the cursor image to the pointer*/
     padding: 0.5rem;
-    display: none;
+    display: none; /*the element is removed, as this is only a way to structure and not show information*/
 }
 
+/*This one manages the thing (in this case, the 3 lines) that appear in the left in toggle mode. It'll probably be used in a label*/
 .navbar-toggler .navbar-toggler-icon {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
     background-repeat: no-repeat;
@@ -117,7 +122,8 @@
     width: 1.5rem;
     height: 1.5rem;
     vertical-align: middle;
-    display: inline-block;
+    display: inline-block; /*An element with display: inline-block will appear on the same line as other inline or inline-block elements. 
+    Without this, the 3 lines won't even appear*/
     cursor: pointer;
 }
 
@@ -126,8 +132,10 @@
 }
 
 .navbar-nav .navbar-toggler .navbar-toggler-icon {
+    /*This is the image of an X, which is applied in*/
     background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS14Ij48cGF0aCBkPSJNMTggNiA2IDE4Ii8+PHBhdGggZD0ibTYgNiAxMiAxMiIvPjwvc3ZnPg==");
 }
+
 
 #navToggle {
     display: none;
@@ -146,11 +154,12 @@
         min-width: 175px;
         top: 0;
         margin: 0;
-        left: -100%;
+        left: -100%; /*this is used to hide the navbar unless checked*/
         padding-right: 15px;
-        transition: left .2s ease-in-out;
+        transition: left 0.2s ease-in-out;
     }
 
+    /*when the Toggle is clicked, the navigation bar that is hidden will become visible.*/
     #navToggle:checked ~ .navbar-nav {
         left: 0;
     }
@@ -177,6 +186,7 @@
 
     .navbar-item:has(.navbar-dropdown)::before {
         content: '';
+        /*this is the arrow-head downwards*/
         background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1jaGV2cm9uLWRvd24iPjxwYXRoIGQ9Im02IDkgNiA2IDYtNiIvPjwvc3ZnPg==');
         background-position: center;
         background-repeat: no-repeat;
@@ -190,6 +200,7 @@
         float: right;
     }
 
+    /*After hovering on the item, it will turn upsdide*/
     .navbar-item:has(.navbar-dropdown):hover::before {
         transform: rotate(180deg);
     }
@@ -225,3 +236,13 @@
         width: calc(100% - (2*0.5rem + 1.5rem));
     }
 }
+
+/*Personal CSS syntax note: writing .class1 .class2 .class3 applies to this kind of structures:
+<div class="class1">
+  <div class="class2">
+    <div class="class3">
+      Some page element(s).
+    </div>
+  </div>
+</div>
+So, to a class 3, inside a class2, inside a class1*/
