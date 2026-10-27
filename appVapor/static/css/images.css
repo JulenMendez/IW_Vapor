@@ -6,4 +6,12 @@
 .card-img{
     width: 300px;
     height: 240px;
+.categorySmallImg{
+    height: 219px;
+    width: 226px;
+}
+
+.categoryBigImg{
+    height: 219px;
+    width: 468px;
 }
