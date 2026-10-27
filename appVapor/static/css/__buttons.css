@@ -11,6 +11,8 @@
     display: inline-block;
 }
 
+/*before means that the following will be aplied before the rest of the content is displayed, which in this case is the functioning
+of the opacity and the transition of it.*/
 .btn:before {
     position: absolute;
     content: "";
@@ -58,6 +60,7 @@
     color: #fff;
 }
 
+/*This manages the colouring of the button while it's being hovered.*/
 .btn-tertiary::before, .btn-card::before {
     background: var(--tertiary);
     background: var(--tertiary-gradient);
