@@ -50,46 +50,87 @@
             </ul>
         </div>
     </nav>
-    
+
+    <!--Every page should have a page container, where everything else will be placed. if needbe, a new container 
+    with bigger max-width can be created in case of the width being too short-->
     <div class="page-container">
-        <div class="banner mb-40">
-            <a href="#">
-                <img src="https://placehold.co/910x125" alt="banner img">
-            </a>
-            <a href="#">
-                <img src="https://placehold.co/970x125" alt="banner img">
+        <!--MENU BAR-->
+        <div class="menubar">
+            <!--The menubar consists essentially of multiple menubar-items that will be placed to the left, and a search bar to the right-->
+            <!--Example of an item WITH the dropdown-->
+            <div class="menubar-item">
+                <!--this is the head of the item in menubar-->
+                <a href="#" class="menubar-link">Categories</a>
+                <!--Each "menubar-dropdown menubar-dropdown-grid" stands for a column. In this example, there are a total of 4 -->
+               <!--In order to divide the elements inside the same column, a dropdown divider can be added. Besides, with subheaders it
+               is possible to give a little header to either a column or a subsection.-->
+                <div class="menubar-dropdown menubar-dropdown-grid">
+                    <div class="dropdown-grid-item">
+                        <h4 class="dropdown-subheader">Subheader</h4>
+                        <a href="#" class="dropdown-link">Test</a>
+                        <a href="#" class="dropdown-link">Test</a>
+                        <a href="#" class="dropdown-link">Test</a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-link">Test</a>
+                        <a href="#" class="dropdown-link">Test</a>
+                        <h4 class="dropdown-subheader">Subheader</h4>
+                        <a href="#" class="dropdown-link">Test</a>
+                        <a href="#" class="dropdown-link">Test</a>
+                        <a href="#" class="dropdown-link">Test</a>
+                    </div>
+                    <div class="dropdown-grid-item">
+                        <h4 class="dropdown-subheader">Subheader</h4>
+                        <a href="#" class="dropdown-link">Test</a>
+                        <a href="#" class="dropdown-link">Test</a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-link">Test</a>
+                        <a href="#" class="dropdown-link">Test</a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-link">Test</a>
+                        <a href="#" class="dropdown-link">Test</a>
+                    </div>
+                </div>
+            </div>
+            <!--Example of an item WITHOUT the dropdown-->
+            <div class="menubar-item">
+                <a href="#" class="menubar-link">Points</a>
+            </div>
+            <div class="menubar-spacer"></div> <!--This is used to place the searchbar at the far right-->
+            <div class="menubar-search">
+                <!--This is the search bar to add the text-->
+                <input type="search" name="search" id="search" placeholder="Search">
+                <!--This is works like the button to confirm search. Don't forget to put the btn-search class-->
+                <a href="#" class="btn-search">
+                    <!--This is the magnifying glass that can be clicked. A normal image would work fine.-->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="#687688" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-search">
+                        <circle cx="11" cy="11" r="8" />
+                        <path d="m21 21-4.3-4.3" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <!--BANNER-->
+        <!--Important note: the total width of the elements inside of the banner div should total 940px. If a different size is wanted, 
+        ask the team to change the width of the page container, or to create another one with bigger size-->
+        <h2>Banner</h2>
+        <div class="banner mb-40"> <!--The mb-40 is to add a margin bottom-->
+            <a href="#"> <!--Change this for the final url destination-->
+                <img src="https://placehold.co/940x125" alt="banner img">
             </a>
         </div>
-    </div>
-
-    <!--BANNER-->
-    <!--Important note: the total width of the elements inside of the banner div should total 940px. If a different size is wanted, 
-    ask the team to change the width of the page container-->
-    <h2>Banner</h2>
-     <div class="banner mb-40"> <!--The mb-40 is to add a margin bottom-->
-        <a href="#"> <!--Change this for the final url destination-->
-            <img src="https://placehold.co/940x125" alt="banner img">
-        </a>
-    </div>
-    <h2>Multiple Banners</h2>
-    <div class="banner banner-grid mb-40">
-        <a href="#">
-            <img src="https://placehold.co/616x125" alt="banner img">
-        </a>
-        <a href="#">
-            <img src="https://placehold.co/314x125" alt="banner img">
-        </a>
-    </div>
-
-
-        
-    
+        <h2>Multiple Banners</h2>
+        <div class="banner banner-grid mb-40">
+            <a href="#">
+                <img src="https://placehold.co/616x125" alt="banner img">
+            </a>
+            <a href="#">
+                <img src="https://placehold.co/314x125" alt="banner img">
+            </a>
+        </div>
+    </div>    
 
 </body>
 
 </html>
-
-<!--Notes:-->
-<!--Every page should go inside a page container. if needbe, a new container with bigger max-width can be created in case of the 
-width being too short-->
-<!--the mb-40 is telling what the margin bottom will be. Can be found in the utilities css.-->

@@ -4,7 +4,7 @@
     height: 40px;
     background: var(--menubar-gradient);
     box-shadow: 0 0 3px rgba( 0, 0, 0, 0.4);
-    max-width: 940px;
+    max-width: 940px; /*It is recommended that the menu bar has a width equal to the page container*/
     color: var(--navbar-text);
     font-weight: bold;
     margin-top: 20px;
@@ -137,6 +137,7 @@
     display: block;
 }
 
+/*Placeholder is the initial text that appears in the search textfield*/
 .menubar-search input[type=search]::placeholder {
     color: #0e1c25;
 }
