@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block title %}Shop{% endblock %}
+
+{%block shopNavBar%}class="navbar-item active"{%endblock shopNavBar%}
+
+{%block pageContent%}
+        <div class="page-container">
+        <!--MENU BAR-->
+        <div class="menubar">
+            <div class="menubar-item">
+                <a href="#" class="menubar-link">Categories</a>
+            </div>
+            <div class="menubar-item">
+                <a href="#" class="menubar-link">Devs</a>
+            </div>
+            <div class="menubar-item">
+                <a href="#" class="menubar-link">Misc</a>
+            </div>
+            <div class="menubar-spacer"></div>
+            <div class="menubar-search">
+                <input type="search" name="search" id="search" placeholder="Search">
+                <a href="#" class="btn-search">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="#687688" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-search">
+                        <circle cx="11" cy="11" r="8" />
+                        <path d="m21 21-4.3-4.3" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        {%block pageBody%}
+       
+        {%block pageBody%}
+{%endblock pageContent%}
