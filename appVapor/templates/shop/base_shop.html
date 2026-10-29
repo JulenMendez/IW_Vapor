@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
 
+{% load static %}
+
 {% block title %}Shop{% endblock %}
 
 {%block shopNavBar%}class="navbar-item active"{%endblock shopNavBar%}
@@ -21,7 +23,7 @@
             <div>
                 <form action="/search" method="get" class="menubar-search">
                     <input type="search" name="name" id="search" placeholder="Search">
-                    <button type = "submit"> <img src="../static/images/game.jpg"></button>
+                    <button type = "submit"> <img src={% static "images/searchButton.png" %} alt = "search button"></button>
                 </form>
             </div>
         </div>

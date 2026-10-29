@@ -21,10 +21,19 @@
     margin-bottom: 40px;
 }
 
+h1 {
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
 
 h2 {
-    color: #fff;
+    color: white;
     text-align: center;
+}
+
+h2.card-title{
+    color: white;
+    text-align: left;
 }
 
 .description{

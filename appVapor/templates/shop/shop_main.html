@@ -1,12 +1,15 @@
  {% extends 'shop/base_shop.html' %}
 
+ {% load static %}
+
+
  {%block pageBody%}
  <!--Page "body" starts here-->
         <!--The big sale-->
         <div class="banner mb-40">
-            <h2>BIG SALE!</h2>
+            <h1>BIG SALE!</h1>
             <a href="#"> <!--Change this for the final url destination-->
-                <img src="../static/images/duck_hunt.jpg" alt="banner img" id="bigOffer">
+                <img src={%static "images/duck_hunt.jpg"%} alt="banner img" id="bigOffer">
             </a>
         </div>
 
@@ -15,11 +18,11 @@
         <div class="container mb-40">
             <div class="card">
                 <a href="#">
-                    <img src="../static/images/pvz.jpg" alt="Card Image" class="card-img">
+                    <img src={%static "images/pvz.jpg"%} alt="Card Image" class="card-img">
                 </a>
                 <div class="card-body">
                     <!--You add title, then a text-->
-                    <h5 class="card-title">PvZ</h5>
+                    <h2 class="card-title">PvZ</h2>
                     <p class="card-text">Cool game, man (this should take from database)!</p>
                     <!--when creating a card, price can be stated as a discount.-->
                     <div class="card-price">
@@ -37,7 +40,7 @@
                 </a>
                 <div class="card-body">
                     <!--You add title, then a text-->
-                    <h5 class="card-title">Half-Life</h5>
+                    <h2 class="card-title">Half-Life</h2>
                     <p class="card-text">So much copium, man (this should take from database)!</p>
                     <!--when creating a card, price can be stated as a discount.-->
                     <div class="card-price">
@@ -55,7 +58,7 @@
                 </a>
                 <div class="card-body">
                     <!--You add title, then a text-->
-                    <h5 class="card-title">Yahoo</h5>
+                    <h2 class="card-title">Yahoo</h2>
                     <p class="card-text">Mario is cool (this should take from database)llllllllllllllllllllllllllllllllllll lllllllllllllllllllllllllllllllllllllllllllllllllllllllllll</p>
                     <!--when creating a card, price can be stated as a discount.-->
                     <div class="card-price">
