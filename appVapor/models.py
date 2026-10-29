@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 class Tag(models.Model):
-    name = models.CharField(max_length=50, unique=True)
+    name = models.CharField(max_length=50)
     description = models.CharField(max_length=300)
 
     def __str__(self):
@@ -10,7 +10,7 @@ class Tag(models.Model):
 
 
 class Dev(models.Model):
-    name = models.CharField(max_length=50, unique=True)
+    name = models.CharField(max_length=50)
     description = models.CharField(max_length=300)
 
     def __str__(self):
@@ -29,9 +29,8 @@ class Sale_event(models.Model):
 
 
 class Game(models.Model):
-    title = models.CharField(max_length=50, unique=True)
+    title = models.CharField(max_length=50)
     sort_description = models.CharField(max_length=300)
-    large_description = models.TextField() #Esto pasa a ser un fichero
     price = models.PositiveSmallIntegerField()
     tags = models.ManyToManyField(Tag)
     realese_date = models.DateField()
