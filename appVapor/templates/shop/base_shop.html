@@ -2,7 +2,7 @@
 
 {% load static %}
 
-{% block title %}Shop{% endblock %}
+{% block title %}Shop{% endblock title%}
 
 {%block shopNavBar%}class="navbar-item active"{%endblock shopNavBar%}
 
@@ -11,10 +11,62 @@
         <!--MENU BAR-->
         <div class="menubar">
             <div class="menubar-item">
-                <a href="#" class="menubar-link">Categories</a>
+                <p class="menubar-link">Categories</p>
+
+                <div class="menubar-dropdown menubar-dropdown-grid">
+                    <div class="dropdown-grid-item">
+                        <h4 class="dropdown-subheader">Gameplay</h4>
+                        <a href="#" class="dropdown-link">Free to play</a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-link">Un jugador</a>
+                        <a href="#" class="dropdown-link">Multijugador</a>
+                        <a href="#" class="dropdown-link">Cooperativos en linea</a>
+                        <a href="#" class="dropdown-link">Basados en equipo</a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-link">Primera persona</a>
+                        <a href="#" class="dropdown-link">Tercera persona</a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-link">FPS</a>
+                        <a href="#" class="dropdown-link">Puzles</a>
+                        <a href="#" class="dropdown-link">Rol</a>
+                        <a href="#" class="dropdown-link">Tipo Dark Souls</a>
+                        <a href="#" class="dropdown-link">Novelas visuales</a>
+                    </div>
+                    <div class="dropdown-grid-item">
+                        <h4 class="dropdown-subheader">Temática</h4>
+                        <a href="#" class="dropdown-link">Ciencia ficción</a>
+                        <a href="#" class="dropdown-link">Posapocalipticos</a>
+                        <a href="#" class="dropdown-link">Aventura</a>
+                        <a href="#" class="dropdown-link">Terror</a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-link">Disparos</a>
+                        <a href="#" class="dropdown-link">Acción</a>
+                        <a href="#" class="dropdown-link">Buena trama</a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-link">Plataformas</a>
+                        <a href="#" class="dropdown-link">Plataformas 3D</a>
+                        <a href="#" class="dropdown-link">Plataforma de puzles</a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-link">Protagonista femenino</a>
+                        <a href="#" class="dropdown-link">LGBTQ+</a>
+                    </div>
+                </div>
             </div>
             <div class="menubar-item">
                 <a href="#" class="menubar-link">Devs</a>
+                <div class="menubar-dropdown menubar-dropdown-grid">
+                    <div class="dropdown-grid-item">
+                        <h4 class="dropdown-subheader">Subheader</h4>
+                        <a href="#" class="dropdown-link">Vapor</a>
+                        <a href="#" class="dropdown-link">Konami</a>
+                        <a href="#" class="dropdown-link">Bethesda</a>
+                        <a href="#" class="dropdown-link">FromSoftware</a>
+                        <a href="#" class="dropdown-link">Team Cherry</a>
+                        <a href="#" class="dropdown-link">Toge Productions</a>
+                        <a href="#" class="dropdown-link">Deconstructeam</a>
+                        <a href="#" class="dropdown-link">Capcom</a>
+                    </div>
+                </div>
             </div>
             <div class="menubar-item">
                 <a href="#" class="menubar-link">Misc</a>
@@ -28,7 +80,5 @@
             </div>
         </div>
 
-        {%block pageBody%}
-       
-        {%endblock pageBody%}
+        {%block pageBody%}{%endblock pageBody%}
 {%endblock pageContent%}

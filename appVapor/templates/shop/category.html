@@ -1,0 +1,50 @@
+{% extends 'shop/base_shop.html' %}
+
+{% load static %}
+
+{% block title %}---{% endblock title%} <!--Poner de título el nombre de la categoria-->
+
+{%block pageBody%}
+<h2>FIRST PERSON SHOOTER</h2>
+        <div class="banner mb-40"> 
+            <a href="#"> 
+                <img src="https://placehold.co/940x125" alt="banner img">
+            </a>
+        </div>
+        <h3 class="description">A video game subgenre focused on weapon-based combat and 3D navigation viewed directly through the eyes of the player's character</h3>
+
+        <div class="categoryContainer">
+            <div class="banner banner-grid">            
+                <a href="#">
+                    <img src="https://placehold.co/226x219" alt="banner img" class="categorySmallImg">
+                </a>
+                <a href="#">
+                    <img src="https://placehold.co/468x219" alt="banner img" class="categoryBigImg">
+                </a>
+                <a href="#">
+                    <img src="https://placehold.co/226x219" alt="banner img" class="categorySmallImg">
+                </a>
+            </div>
+            <div class="banner banner-grid mb-40">
+                <a href="#">
+                    <img src="https://placehold.co/468x219" alt="banner img" class="categoryBigImg">
+                </a>
+                <a href="#">
+                    <img src="https://placehold.co/226x219" alt="banner img" class="categorySmallImg">
+                </a> 
+                <a href="#">
+                    <img src="https://placehold.co/226x219" alt="banner img" class="categorySmallImg">
+                </a>
+            </div>
+            <!--Al ultimo banner banner-grid ponerle mb-40 para que haya hueco abajo-->    
+
+            <!--Para Julen-->
+            <!--Es una plantilla de buscar juegos de cierto genero. Maximo 12 juegos. 3 por fila--> 
+            <!--En el banner debe estar la foto de banner del genero. Esto es, habra una foto del tamaño del de la plantilla que habra que poner ahi-->
+            <!--En el titulo debe estar el nombre del genero-->  
+            <!--En la descripcion hacer como con el titulo, el que le corresponda--> 
+            <!--En las imagenes. Si hay 3 juegos en el genero, pues habra 3 imagenes. En caso de que un genero tenga 3 o mas juegos,
+                poner 3 juegos por linea hasta que haya 12 juegos en total. Sino, poner los que haya para rellenar-->
+            
+        </div>
+{%endblock pageBody%}
