@@ -30,14 +30,27 @@
 }
 
 
+h1 {
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
 
 h2 {
-    color: #fff;
+    color: white;
     text-align: center;
 }
 
 .storeHeader{
     color:#fff;
+}
+
+.searchHeader{
+    color:#fff;
+    text-align: left;
+}
+
+h2.card-title{
+    color: white;
     text-align: left;
 }
 
@@ -185,7 +198,6 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 }
 
 .gamePrices{
-
     display: flex;
     justify-content: right;
     align-items: right;
