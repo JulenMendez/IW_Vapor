@@ -18,9 +18,14 @@
     width: 468px;
 }
 
-.imageStoreGame{
-    height:400px;
+.bigImageStoreGame{
+    height:338px;
     width: 600px;
+}
+
+.smallImageStoreGame{
+    height:154px;
+    width: 330px;
 }
 
 .searchImage{
