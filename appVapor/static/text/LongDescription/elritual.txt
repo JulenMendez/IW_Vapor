@@ -1,0 +1,5 @@
+#VERSIÓN TEMPRANA DE DESARROLLO
+Deadlock continúa en fases tempranas de desarrollo, por lo que muchos recursos artísticos son temporales, buena parte de la jugabilidad es experimental y la localización es un trabajo en curso.
+
+#ACCESO LIMITADO
+Por el momento, el acceso a Deadlock está limitado a quienes han recibido una invitación a participar en las pruebas de juego.

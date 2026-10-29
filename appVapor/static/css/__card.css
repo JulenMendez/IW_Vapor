@@ -125,6 +125,9 @@
     line-height: 16px;
     font-size: 15px;
     padding: 8px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
 }
 
 .card.card-sm .btn-card {
@@ -157,4 +160,14 @@
     font-size: 16px;
     letter-spacing: 0.1ch;
     text-shadow: 0 1px 3px rgb(0 0 0 / 50%);
+}
+
+
+.card-body-text {
+    flex: 0 auto;                      
+}
+
+.card-price-store {
+    flex: 1;                 
+    text-align: right;
 }

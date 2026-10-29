@@ -1,0 +1,101 @@
+{% extends 'shop/base_shop.html' %}
+
+{% load static %}
+
+{% block title %}Shop{% endblock title%} <!--Poner de título el nombre del juego-->
+
+
+{%block pageBody%}
+       <h2 class="storeHeader">TITLE</h2> 
+        <!-- Aquí va el título del juego seleccionado -->
+        
+        <div class="categoryContainer">
+            <div class="gameStorePage">
+                <div class="carrusel">
+                    <a href="#">
+                        <img src="https://placehold.co/600x338" alt="banner img" class="bigImageStoreGame">
+                        <!-- La foto del juego que sea para el carrusel--> <!--HACER LO DE STATIC CUANDO SE PONGAN LAS FOTOS-->
+                    </a>
+                </div>
+                <div class="derecha">
+                    <div>
+                        <a href="#">
+                            <img src="https://placehold.co/330x154" alt="banner img" class="smallImageStoreGame" >
+                            <!-- La foto del juego que le corresponda. Mismo ratio que las de 460x215-->
+                        </a>
+                    </div>
+                    <div class="descriptionStore">
+                        <p>Descripciooooooooooooooooooooooooon</p>
+                        <!-- Mete la descripción CORTA que sea -->
+
+                    </div>
+                    <div class="etiquetas">
+                        <a href="#" class="btn btn-card">Etiqueta1</a>
+                        <a href="#" class="btn btn-card">Etiqueta2</a>
+                        <a href="#" class="btn btn-card">Etiqueta3</a>
+                        <a href="#" class="btn btn-card">Etiqueta4</a>
+                        <a href="#" class="btn btn-card">Etiqueta5</a>
+                        <a href="#" class="btn btn-card">Etiqueta6</a>
+                    </div>
+                    <!-- Mete las etiquetas QUE LE CORRESPONDAN AL JUEGO. Puedes quitar o meter -->
+                </div>
+            </div>             
+        </div>
+       
+
+        <div class="storeContainer">       
+            <div class="words">
+                <h5 class="storeTitle">TITLE</h5>
+                 <!-- El título del juego. OTRA VEZ -->
+                <p class="storeDesc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, ullam!</p>
+                 <!-- Mete la descripción CORTA que sea. OTRA VEZ -->
+            </div> 
+
+            <!-- PARA LOS JUEGO CON DESCUENTO -->
+            <div class="priceContainer">
+                <div class="discount">-25%</div>
+                <!-- El descuento que haga falta -->
+                <div class="prices">
+                    <span class="original">19,50€</span>
+                    <!-- Precio VIEJO -->
+                    <span class="new">14,62€</span>
+                     <!-- Precio NUEVO -->
+                </div>
+             
+                    <a href="#" class="btn btn-card">Comprar</a>
+                    <!-- Botón de comprar -->
+                
+            </div>
+            <!-- PARA LOS JUEGOS SIN DESCUENTO -->
+            <!--
+                 <div class="priceContainer">
+                <div class="prices">
+                    <span class="storePrice">19,50€</span> 
+                    
+                </div>
+             
+                <a href="#" class="btn btn-card">Comprar</a>
+                
+                 </div>
+            -->
+           
+        </div>
+
+        <div class="aboutGame mb-20">
+            <h3 class="description">GAME DESCRIPTION</h3>
+            <!-- Esto se queda así -->
+            <p class="gameDesc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, ullam!</p>
+             <!-- La descripción del juego. OTRA VEZ -->
+        </div>
+
+        <div class="Requisitos mb-20">
+            <h3 class="description">SPECS</h3>
+             <!-- Esto se queda así -->
+            <p class="gameDesc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, ullam!</p>
+             <!-- Inventate las specs que haga falta. 
+                    GRAFICA
+                    RAM
+                    PROCESADOR de lo que sea y así -->
+        </div>
+    </div>
+{%endblock pageBody%}

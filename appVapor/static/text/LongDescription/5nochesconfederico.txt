@@ -1,0 +1,9 @@
+¡Bienvenido a tu nuevo trabajo de verano en Freddy Fazbear's Pizza, donde tanto niños como padres acuden en masa en busca de diversión y comida hasta donde alcanza la vista! La atracción principal es Freddy Fazbear, por supuesto, y sus dos amigos. ¡Son robots animatrónicos, programados para entretener al público! Sin embargo, el comportamiento de los robots se ha vuelto algo impredecible por la noche, y resultaba mucho más barato contratarte como guardia de seguridad que buscar a un técnico de reparaciones.
+
+Desde tu pequeña oficina debes vigilar atentamente las cámaras de seguridad. Tienes una cantidad muy limitada de electricidad que puedes usar cada noche (recortes presupuestarios de la empresa, ya sabes). Eso significa que, cuando te quedes sin electricidad por la noche, ¡se acabaron las puertas de seguridad y se acabaron las luces! Si algo no va bien —es decir, si Freddybear o sus amigos no están en sus sitios correspondientes—, debes encontrarlos en los monitores y protegerte si es necesario.
+
+¿Podrás sobrevivir a cinco noches en Freddy’s?
+
+«A pesar de la sencillez de los controles y la premisa del juego, Five Nights at Freddy’s da miedo. Es un ejemplo fantástico de cómo la ingeniosidad en el diseño y la sutileza pueden utilizarse para crear una experiencia aterradora. Las sencillas imágenes fijas y el acertado diseño de los personajes se llevan todo el protagonismo en este juego, y demuestran que Scott Cawthon sabe bastante sobre los miedos secretos que siente la gente al mirar muñecos y juguetes espeluznantes. Es elegante en la forma en que siembra el miedo, y es imprescindible para cualquiera a quien le gusten los juegos de terror». —Joel Couture
+
+¡Este juego se ha creado con Clickteam Fusion!

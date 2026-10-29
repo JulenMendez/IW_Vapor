@@ -114,6 +114,9 @@
     padding: 0px 6px;
     max-width: 210px;
     margin-right: 5px;
+    display: flex;
+    align-items: center;
+
 }
 
 .menubar-search:hover {
@@ -158,6 +161,64 @@
 }
 
 .menubar-search .btn-search:hover {
+    background-color: #63B5E4;
+}
+
+.menubar-search button {
+    border : 0;
+    padding : 0;
+    background-color: #63B5E4;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.menubar-search button:hover {
+    opacity: 0.5;
+}
+
+.menubar-search button img{
+    width: 25px;
+    height: 25px;
+}
+
+.menubar-search .menubar-form input[type=search] {
+    color: #0e1c25;
+    font-size: 14px;
+    margin-top: 1px;
+    text-shadow: 1px 1px 0px rgba( 255, 255, 255, 0.1);
+    font-weight: 300;
+    font-style: italic;
+    margin-left: 8px;
+    width: calc( 100% - 25px - 8px );
+    outline: none;
+    line-height: 26px;
+    border: none;
+    background-color: transparent;
+    display: block;
+}
+
+/*Placeholder is the initial text that appears in the search textfield*/
+.menubar-search .menubar-form input[type=search]::placeholder {
+    color: #0e1c25;
+}
+
+.menubar-search .menubar-form input[type=search]:not(:placeholder-shown) {
+    color: #eee;
+    font-style: normal;
+}
+
+.menubar-search .menubar-form .btn-search {
+    position: absolute;
+    right: 30px;
+    top: 7.5px;
+    background-color: #A1D2EF;
+    border-radius: 2px;
+    width: 25px;
+    height: 25px;
+}
+
+.menubar-search .menubar-form .btn-search:hover {
     background-color: #63B5E4;
 }
 

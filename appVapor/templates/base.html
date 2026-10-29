@@ -6,8 +6,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/css/utilities.css">
-    <link rel="stylesheet" href="../static/css/steamui.css">
+    <link rel="stylesheet" href="{% static 'css/utilities.css' %}">
+    <link rel="stylesheet" href="{% static 'css/steamui.css' %}">
     
     <title>{% block title %}Default title{% endblock title%}</title>
 </head>
@@ -20,8 +20,8 @@
             </div>
             <div class="navbar-logo">
                 <a href="https://store.steampowered.com/?snr=1_5_9__global-header">
-                    <img src="https://store.akamai.steamstatic.com/public/shared/images/header/logo_steam.svg?t=962016"
-                        width="176" height="44">
+                    <img src={%static "images/steam_logo.png"%}
+                        alt="logo" id="logo_img">
                 </a>
             </div>
             <input type="checkbox" id="navToggle">
