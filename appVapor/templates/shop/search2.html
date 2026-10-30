@@ -45,7 +45,7 @@ Esto es, si yo pongo en el buscador "Fallout", en vez de SEARCH, debería poner 
                 <span class="price-new">{{(games_list[forloop.parentloop.counter0][forloop.counter0].price/100)(games_list[n][m].price * games_list[n][m].discount)/10000}}€</span>
                 <!-- Precio nuevo -->
             </div>
-                <a href="#" class="btn btn-card">Comprar</a>
+                <a href="./games/{{games_list[forloop.parentloop.counter0][forloop.counter0].get_url_name}}" class="btn btn-card">Comprar</a>
                 <!-- Boton de compra. Debería llevarte a la pagina de store de este juego -->
         </div>
     {% else %}
@@ -58,7 +58,7 @@ Esto es, si yo pongo en el buscador "Fallout", en vez de SEARCH, debería poner 
                     <span class="price">{{games_list[forloop.parentloop.counter0][forloop.counter0].price/100}}€</span>
                         <!-- Precio -->
                 </div>
-                    <a href="#" class="btn btn-card">Comprar</a>      
+                    <a href="./games/{{games_list[forloop.parentloop.counter0][forloop.counter0].get_url_name}}" class="btn btn-card">Comprar</a>      
                     <!-- Boton de compra. Debería llevarte a la pagina de store de este juego -->           
             </div>
         {%endif%}
