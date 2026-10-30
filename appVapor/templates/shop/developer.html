@@ -7,7 +7,7 @@
 {% block title %}---{% endblock title%} <!--Poner de título el nombre del juego-->
 
 {%block pageBody%}
-<h2>{{developer.name}}</h2>
+<h1>{{developer.name}}</h1>
         <div class="mb-40"> 
             <a> 
                 
@@ -16,7 +16,7 @@
                 {%endwith%}
             </a>
         </div>
-        <h3 class="description">{{developer.description}}</h3>
+        <h2 class="description">{{developer.description}}</h2>
         <div class="categoryContainer">
             <div class="banner banner-grid mb-40">   
                 {%if games_list|length >= 1 %}
