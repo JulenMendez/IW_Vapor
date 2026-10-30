@@ -10,113 +10,41 @@
         <div class="banner mb-40">
             <h1>BIG SALE!</h1>
             <a href="#"> <!--Change this for the final url destination-->
-                <img src={%static "images/duck_hunt.jpg"%} alt="banner img" id="bigOffer">
+                <img src={%static "images/HorizontalCover/{{big_sales}}"%} alt="banner img" id="bigOffer">
             </a>
         </div>
 
-        <!--Featured games-->
-        <h2>Featured games</h2> <!--name of the section. Important: 3 or less cards per game-->
+        {%for n in title_list%}
+        <h2>{{title_list[n]}}</h2> <!--name of the section. Important: 3 or less cards per game-->
         <div class="container mb-40">
+            {%for m in games_list%}
             <div class="card">
-                <a href="#"> <!--Link to the game-->
-                    <img src={%static "images/game.jpg"%} alt="Card Image" class="card-img"> <!--image of the game-->
+                <a href="./games/{{games_list[n][m]}}"> <!--Link to the game-->
+                    <img src={%static "images/VertivalCover/{{games_list[n][m].title}}.jpg"%} alt="Card Image" class="card-img"> <!--image of the game-->
                 </a>
                 <div class="card-body">
                     <!--You add title, then a text (short desc)-->
-                    <h2 class="card-title">PvZ</h2>
-                    <p class="card-text">Cool game, man (this should take from database)!</p>
+                    <h2 class="card-title">{{games_list[n][m].title}}</h2>
+                    <p class="card-text">{{games_list[n][m].short_description}}</p>
                     <!--when creating a card, price can be stated as a discount.-->
                     <div class="card-price">
-                        <div class="card-price-discount">-99%</div> <!--discount-->
-                        <div class="card-discount-prices">
-                            <span class="card-price-original">19,99€</span> <!--original price-->
-                            <span class="card-price-new">0,19€</span> <!--discounted price-->
-                        </div>
+                        {%if games_list[n][m].discount != 0%}
+                            <div class="card-price-discount">{{games_list[n][m].discount}}</div> <!--discount-->
+                            <div class="card-discount-prices">
+                                <span class="card-price-original">{{games_list[n][m].price/100}}€</span> <!--original price-->
+                                <span class="card-price-new">{{(games_list[n][m].price/100)(games_list[n][m].price * games_list[n][m].discount)/10000}}€</span> <!--discounted price-->
+                            </div>
+                        {% else %}
+                            {%if games_list[n][m].price == 0%}
+                                <span class="card-pricetag">Free</span>
+                            {%else%}
+                                <span class="card-pricetag">{{games_list[n][m].price/100}}€</span>
+                            {%endif%}
+                        {%endif%}
                     </div>
                     </div>
                 </div>
-            <div class="card">
-                <a href="#"> <!--Link to the game-->
-                    <img src={%static "images/game.jpg"%} alt="Card Image" class="card-img"> <!--image of the game-->
-                </a>
-                <div class="card-body">
-                    <!--You add title, then a text (short desc)-->
-                    <h2 class="card-title">PvZ</h2>
-                    <p class="card-text">Cool game, man (this should take from database)!</p>
-                    <!--when creating a card, price can be stated as a discount.-->
-                    <div class="card-price">
-                        <div class="card-price-discount">-99%</div> <!--discount-->
-                        <div class="card-discount-prices">
-                            <span class="card-price-original">19,99€</span> <!--original price-->
-                            <span class="card-price-new">0,19€</span> <!--discounted price-->
-                        </div>
-                    </div>
-                    </div>
-                </div>
-            <div class="card">
-                <a href="#"> <!--Link to the game-->
-                    <img src={%static "images/game.jpg"%} alt="Card Image" class="card-img"> <!--image of the game-->
-                </a>
-                <div class="card-body">
-                    <!--You add title, then a text (short desc)-->
-                    <h2 class="card-title">PvZ</h2>
-                    <p class="card-text">Cool game, man (this should take from database)!</p>
-                    <!--when creating a card, price can be stated as a discount.-->
-                    <div class="card-price">
-                        <div class="card-price-discount">-99%</div> <!--discount-->
-                        <div class="card-discount-prices">
-                            <span class="card-price-original">19,99€</span> <!--original price-->
-                            <span class="card-price-new">0,19€</span> <!--discounted price-->
-                        </div>
-                    </div>
-                    </div>
-                </div>
-            </div>
-        <!--Featured games-->
-        {% comment %} <h2>Featured games</h2> <!--name of the section. Important: 3 or less cards per game-->
-        <div class="container mb-40">
-            <div class="card">
-                <a href="#"> <!--Link to the game-->
-                    <img src={%static "images/game.jpg"%} alt="Card Image" class="card-img"> <!--image of the game-->
-                </a>
-                <div class="card-body">
-                    <!--You add title, then a text (short desc)-->
-                    <h2 class="card-title">PvZ</h2>
-                    <p class="card-text">Cool game, man (this should take from database)!</p>
-                    <!--when creating a card, price can be stated as a discount.-->
-                    <div class="card-price">
-                        <span class="card-pricetag">Free</span> <!--This is a way to show the price normally-->
-                    </div>
-                    </div>
-                </div>
-            <div class="card">
-                <a href="#"> <!--Link to the game-->
-                    <img src={%static "images/game.jpg"%} alt="Card Image" class="card-img"> <!--image of the game-->
-                </a>
-                <div class="card-body">
-                    <!--You add title, then a text (short desc)-->
-                    <h2 class="card-title">PvZ</h2>
-                    <p class="card-text">Cool game, man (this should take from database)!</p>
-                    <!--when creating a card, price can be stated as a discount.-->
-                    <div class="card-price">
-                        <span class="card-pricetag">Free</span> <!--This is a way to show the price normally-->
-                    </div>
-                    </div>
-                </div>
-            <div class="card">
-                <a href="#"> <!--Link to the game-->
-                    <img src={%static "images/game.jpg"%} alt="Card Image" class="card-img"> <!--image of the game-->
-                </a>
-                <div class="card-body">
-                    <!--You add title, then a text (short desc)-->
-                    <h2 class="card-title">PvZ</h2>
-                    <p class="card-text">Cool game, man (this should take from database)!</p>
-                    <!--when creating a card, price can be stated as a discount.-->
-                    <div class="card-price">
-                        <span class="card-pricetag">Free</span> <!--This is a way to show the price normally-->
-                    </div>
-                    </div>
-                </div>
-            </div>{% endcomment %}
+            {%endfor%}
+        {%endfor%}
         </div> 
     {%endblock pageBody%}
