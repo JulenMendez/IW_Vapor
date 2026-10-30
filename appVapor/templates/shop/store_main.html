@@ -6,7 +6,7 @@
 
 {%block pageBody%}
 <!--Page "body" starts here-->
-    <h2 class="storeHeader">{{game.title}}</h2> 
+    <h1 class="storeHeader">{{game.title}}</h1> 
 
     <div class="categoryContainer">
         <div class="gameStorePage">
@@ -43,9 +43,9 @@
         </div>             
     </div>
 
-     <div class="storeContainer">       
+        <div class="storeContainer">       
             <div class="words">
-                <h5 class="storeTitle">{{game.title}}</h5>
+                <h2 class="storeTitle">{{game.title}}</h2>
                  <!-- El título del juego. OTRA VEZ -->
                 <p class="storeDesc">{{game.short_description}}</p>
                  <!-- Mete la descripción CORTA que sea. OTRA VEZ -->
@@ -70,12 +70,12 @@
             {% else %}
                 <!-- PARA LOS JUEGOS SIN DESCUENTO -->
                     <div class="priceContainer">
-                    <div class="prices">
-                        <span class="storePrice">{{game.price}}</span> 
-                        
-                    </div>
+                        <div class="prices">
+                            <span class="storePrice">{{game.price}}</span> 
+                            
+                        </div>
                 
-                    <a href="#" class="btn btn-card">Comprar</a>
+                        <a href="#" class="btn btn-card">Comprar</a>
                     
                     </div>
             {%endif%}
@@ -88,6 +88,5 @@
             <p class="gameDesc">{{game.short_description}}</p>
              <!-- La descripción del juego. OTRA VEZ -->
         </div>
-    </div>
 
 {%endblock pageBody%}
