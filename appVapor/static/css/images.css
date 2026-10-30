@@ -1,6 +1,7 @@
 #bigOffer{
     width : 940px;
     height: 430px;
+    align-items: center;
 }
 
 .card-img{
