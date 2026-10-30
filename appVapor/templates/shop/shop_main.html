@@ -8,13 +8,15 @@
  {%block pageBody%}
  <!--Page "body" starts here-->
         <!--The big sale-->
-        <div class="banner mb-40">
-            <h1>BIG SALE!</h1>
-            <a href="{{big_sales.get_url_name}}"> <!--Change this for the final url destination-->
-                {%with "images/HorizontalCover/"|add:big_sales.get_image_name|add:".jpg" as image_static%}
-                    <img src={% static image_static %} alt="banner img" id="bigOffer">
-                {%endwith%}
-            </a>
+        <div class="container mb-40">
+            <div class="banner mb-40">
+                <h1>BIG SALE!</h1>
+                <a href="{{big_sales.get_url_name}}"> <!--Change this for the final url destination-->
+                    {%with "images/HorizontalCover/"|add:big_sales.get_image_name|add:".jpg" as image_static%}
+                        <img src={% static image_static %} alt="banner img" id="bigOffer">
+                    {%endwith%}
+                </a>
+            </div>
         </div>
         {%for n in title_list%}
         <h2>{{title_list|index:forloop.counter0}}</h2> <!--name of the section. Important: 3 or less cards per game-->
