@@ -16,39 +16,39 @@
                 <div class="menubar-dropdown menubar-dropdown-grid">
                     <div class="dropdown-grid-item">
                         <h4 class="dropdown-subheader">Gameplay</h4>
-                        <a href="#" class="dropdown-link">Free to play</a>
+                        <a href="{% url "category" "free-to-play"%}" class="dropdown-link">Free to play</a>
                         <div class="dropdown-divider"></div>
-                        <a href="#" class="dropdown-link">Un jugador</a>
-                        <a href="#" class="dropdown-link">Multijugador</a>
-                        <a href="#" class="dropdown-link">Cooperativos en linea</a>
-                        <a href="#" class="dropdown-link">Basados en equipo</a>
+                        <a href="{% url "category" "un-jugador"%}" class="dropdown-link">Un jugador</a>
+                        <a href="{% url "category" "multijugador"%}" class="dropdown-link">Multijugador</a>
+                        <a href="{% url "category" "cooperativos-en-linea"%}" class="dropdown-link">Cooperativos en linea</a>
+                        <a href="{% url "category" "basados-en-equipo"%}" class="dropdown-link">Basados en equipo</a>
                         <div class="dropdown-divider"></div>
-                        <a href="#" class="dropdown-link">Primera persona</a>
-                        <a href="#" class="dropdown-link">Tercera persona</a>
+                        <a href="{% url "category" "primera-persona"%}" class="dropdown-link">Primera persona</a>
+                        <a href="{% url "category" "tercera-persona"%}" class="dropdown-link">Tercera persona</a>
                         <div class="dropdown-divider"></div>
-                        <a href="#" class="dropdown-link">FPS</a>
-                        <a href="#" class="dropdown-link">Puzles</a>
-                        <a href="#" class="dropdown-link">Rol</a>
-                        <a href="#" class="dropdown-link">Tipo Dark Souls</a>
-                        <a href="#" class="dropdown-link">Novelas visuales</a>
+                        <a href="{% url "category" "fps"%}" class="dropdown-link">FPS</a>
+                        <a href="{% url "category" "puzles"%}" class="dropdown-link">Puzles</a>
+                        <a href="{% url "category" "rol"%}" class="dropdown-link">Rol</a>
+                        <a href="{% url "category" "tipo-dark-souls"%}" class="dropdown-link">Tipo Dark Souls</a>
+                        <a href="{% url "category" "novelas-visuales"%}" class="dropdown-link">Novelas visuales</a>
                     </div>
                     <div class="dropdown-grid-item">
                         <h4 class="dropdown-subheader">Temática</h4>
-                        <a href="#" class="dropdown-link">Ciencia ficción</a>
-                        <a href="#" class="dropdown-link">Posapocalipticos</a>
-                        <a href="#" class="dropdown-link">Aventura</a>
-                        <a href="#" class="dropdown-link">Terror</a>
+                        <a href="{% url "category" "ciencia-ficcion"%}" class="dropdown-link">Ciencia ficción</a>
+                        <a href="{% url "category" "posapocalipticos"%}" class="dropdown-link">Posapocalipticos</a>
+                        <a href="{% url "category" "aventura"%}" class="dropdown-link">Aventura</a>
+                        <a href="{% url "category" "terror"%}" class="dropdown-link">Terror</a>
                         <div class="dropdown-divider"></div>
-                        <a href="#" class="dropdown-link">Disparos</a>
-                        <a href="#" class="dropdown-link">Acción</a>
-                        <a href="#" class="dropdown-link">Buena trama</a>
+                        <a href="{% url "category" "disparos"%}" class="dropdown-link">Disparos</a>
+                        <a href="{% url "category" "accion"%}" class="dropdown-link">Acción</a>
+                        <a href="{% url "category" "buena-trama"%}" class="dropdown-link">Buena trama</a>
                         <div class="dropdown-divider"></div>
-                        <a href="#" class="dropdown-link">Plataformas</a>
-                        <a href="#" class="dropdown-link">Plataformas 3D</a>
-                        <a href="#" class="dropdown-link">Plataforma de puzles</a>
+                        <a href="{% url "category" "plataformas"%}" class="dropdown-link">Plataformas</a>
+                        <a href="{% url "category" "plataformas-3d"%}" class="dropdown-link">Plataformas 3D</a>
+                        <a href="{% url "category" "plataforma-de-puzles"%}" class="dropdown-link">Plataforma de puzles</a>
                         <div class="dropdown-divider"></div>
-                        <a href="#" class="dropdown-link">Protagonista femenino</a>
-                        <a href="#" class="dropdown-link">LGBTQ+</a>
+                        <a href="{% url "category" "protagonista-femenino"%}" class="dropdown-link">Protagonista femenino</a>
+                        <a href="{% url "category" "lgbtq+"%}" class="dropdown-link">LGBTQ+</a>
                     </div>
                 </div>
             </div>
@@ -57,14 +57,14 @@
                 <div class="menubar-dropdown menubar-dropdown-grid">
                     <div class="dropdown-grid-item">
                         <h4 class="dropdown-subheader">Subheader</h4>
-                        <a href="#" class="dropdown-link">Vapor</a>
-                        <a href="#" class="dropdown-link">Konami</a>
-                        <a href="#" class="dropdown-link">Bethesda</a>
-                        <a href="#" class="dropdown-link">FromSoftware</a>
-                        <a href="#" class="dropdown-link">Team Cherry</a>
-                        <a href="#" class="dropdown-link">Toge Productions</a>
-                        <a href="#" class="dropdown-link">Deconstructeam</a>
-                        <a href="#" class="dropdown-link">Capcom</a>
+                        <a href="{% url "dev" "vapor"%}" class="dropdown-link">Vapor</a>
+                        <a href="{% url "dev" "konami"%}" class="dropdown-link">Konami</a>
+                        <a href="{% url "dev" "bethesda"%}" class="dropdown-link">Bethesda</a>
+                        <a href="{% url "dev" "fromsoftware"%}" class="dropdown-link">FromSoftware</a>
+                        <a href="{% url "dev" "team-cherry"%}" class="dropdown-link">Team Cherry</a>
+                        <a href="{% url "dev" "toge-productions"%}" class="dropdown-link">Toge Productions</a>
+                        <a href="{% url "dev" "deconstructeam"%}" class="dropdown-link">Deconstructeam</a>
+                        <a href="{% url "dev" "capcom"%}" class="dropdown-link">Capcom</a>
                     </div>
                 </div>
             </div>
