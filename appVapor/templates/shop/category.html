@@ -6,7 +6,7 @@
 {% block title %}---{% endblock title%} <!--Poner de título el nombre de la categoria-->
 
 {%block pageBody%}
-<h2>{{tag.name}}</h2>
+<h1>{{tag.name}}</h1>
         <div class="mb-40"> 
             
             <a> 
@@ -16,13 +16,13 @@
                
             </a>
         </div>
-        <h3 class="description">{{tag.description}}</h3>
+        <h2 class="description">{{tag.description}}</h2>
 
         <div class="categoryContainer">
             <div class="banner banner-grid mb-40">            
                 
                 {%if games_list|length >= 1 %}
-                <a href="url 'game' games_list.get_url_name">
+                <a href="url'game'games_list.get_url_name">
                     {%with games_list|index:0 as index_data%}
                         {%with "images/HorizontalCover/"|add:index_data.get_image_name|add:".jpg" as image_static%}
                         <img src={% static image_static %} alt="banner img" class="categorySmallImg">
@@ -34,7 +34,7 @@
                 {%endif%}
 
                 {%if games_list|length >= 2 %}
-                <a href="url 'game' n.get_url_name">
+                <a href="url'game'n.get_url_name">
                     {%with games_list|index:1 as index_data%}
                     {%with "images/HorizontalCover/"|add:index_data.get_image_name|add:".jpg" as image_static%}
                         <img src={% static image_static %} alt="banner img" class="categoryBigImg">
@@ -47,7 +47,7 @@
                 {%endif%}
 
                 {%if games_list|length >= 3 %}
-                <a href="url 'game' n.get_url_name">
+                <a href="url'game'n.get_url_name">
                     
                     {%with games_list|index:2 as index_data%}
                     {%with "images/HorizontalCover/"|add:index_data.get_image_name|add:".jpg" as image_static%}
@@ -72,5 +72,4 @@
             <!--En las imagenes. Si hay 3 juegos en el genero, pues habra 3 imagenes. En caso de que un genero tenga 3 o mas juegos,
                 poner 3 juegos por linea hasta que haya 12 juegos en total. Sino, poner los que haya para rellenar-->
             
-        </div>
 {%endblock pageBody%}
