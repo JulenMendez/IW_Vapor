@@ -25,7 +25,7 @@
             <div class="card">
             {%with games_list|index:forloop.parentloop.counter0|index:forloop.counter0 as the_game%}
                 {%with "images/VerticalCover/"|add:the_game.get_image_name|add:".jpg" as image_static%}
-                <a href="./games/{{games_list.forloop.parentloop.counter0.forloop.counter0.get_url_name}}"> <!--Link to the game-->
+                <a href="./games/{{the_game.get_url_name}}"> <!--Link to the game-->
                     <img src={%static image_static%} alt="Card Image" class="card-img"> <!--image of the game-->
                 </a>
                 {%endwith%}
