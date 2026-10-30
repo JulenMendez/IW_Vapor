@@ -53,7 +53,7 @@ def get_tag_by_name(tag_url_name:str) -> Tag:
 
 
 def get_games_by_tag(tag:Tag, limit:int):
-    games = Game.objects.filter(tags__in=tag).order_by("?")
+    games = Game.objects.filter().filter(tags=tag).order_by("?")
 
     if limit == -1:
         return games
