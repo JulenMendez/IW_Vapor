@@ -16,42 +16,41 @@
                 {%endwith%}
             </a>
         </div>
-
         {%for n in title_list%}
-            <h2>{{title_list|index:forloop.counter0}}</h2> <!--name of the section. Important: 3 or less cards per game-->
+        <h2>{{title_list|index:forloop.counter0}}</h2> <!--name of the section. Important: 3 or less cards per game-->
         <div class="container mb-40">
-            {%for m in games_list%}
+            {%for m in games_list|index:forloop.counter0%}
             <div class="card">
-                {%with games_list|index:forloop.parentloop.counter0|index:forloop.counter0 as imageDef%}
-                {%with "images/VerticalCover/"|add:imageDef|add:".jpg" as image_static%}
+            {%with games_list|index:forloop.parentloop.counter0|index:forloop.counter0 as the_game%}
+                {%with "images/VerticalCover/"|add:the_game.get_image_name|add:".jpg" as image_static%}
                 <a href="./games/{{games_list.forloop.parentloop.counter0.forloop.counter0.get_url_name}}"> <!--Link to the game-->
                     <img src={%static image_static%} alt="Card Image" class="card-img"> <!--image of the game-->
                 </a>
                 {%endwith%}
-                {%endwith%}
                 <div class="card-body">
                     <!--You add title, then a text (short desc)-->
-                    <h2 class="card-title">{{games_list.forloop.parentloop.counter0.forloop.counter0.title}}</h2>
-                    <p class="card-text">{{games_list.forloop.parentloop.counter0.forloop.counter0.short_description}}</p>
+                    <h2 class="card-title">{{the_game.title}}</h2>
+                    <p class="card-text">{{the_game.short_description}}</p>
                     <!--when creating a card, price can be stated as a discount.-->
                     <div class="card-price">
-                        {%if games_list.forloop.parentloop.counter0.forloop.counter0.discount != 0%}
-                            <div class="card-price-discount">{{games_list.forloop.parentloop.counter0.forloop.counter0.discount}}</div> <!--discount-->
+                        {%if the_game.discount != 0%}
+                            <div class="card-price-discount">{{the_game.discount}}</div> <!--discount-->
                             <div class="card-discount-prices">
-                                <span class="card-price-original">{{games_list.forloop.parentloop.counter0.forloop.counter0.price}}€</span> <!--original price-->
-                                <span class="card-price-new">{{games_list.forloop.parentloop.counter0.forloop.counter0.price}}€</span> <!--discounted price-->
+                                <span class="card-price-original">{{the_game.price}}€</span> <!--original price-->
+                                <span class="card-price-new">{{the_game.price}}€</span> <!--discounted price-->
                             </div>
                         {% else %}
-                            {%if games_list.forloop.parentloop.counter0.forloop.counter0.price == 0%}
+                            {%if the_game.price == 0%}
                                 <span class="card-pricetag">Free</span>
                             {%else%}
-                                <span class="card-pricetag">{{games_list.forloop.parentloop.counter0.forloop.counter0.price}}€</span>
+                                <span class="card-pricetag">{{the_game.price}}€</span>
                             {%endif%}
                         {%endif%}
                     </div>
                     </div>
                 </div>
+            {%endwith%}
             {%endfor%}
-        {%endfor%}
-        </div> 
+        </div>
+        {%endfor%} 
     {%endblock pageBody%}
