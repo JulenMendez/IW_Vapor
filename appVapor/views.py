@@ -48,7 +48,7 @@ def search(request:HttpRequest):
     context:dict = {}
     context["games_list"] = services.search_games_by_title(name)
 
-    return render(request, 'shop/search.html', context)
+    return render(request, 'shop/search2.html', context)
 
 
 

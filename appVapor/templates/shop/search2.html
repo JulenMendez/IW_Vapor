@@ -19,7 +19,9 @@ Esto es, si yo pongo en el buscador "Fallout", en vez de SEARCH, debería poner 
     <div class="search-item">
         <div class="imag-search">
             <a href="{% url 'game' n.get_url_name %}">
-                <img src={%static "images/HorizontalCover/n.get_image_name.jpg"%} alt="banner img">
+                {%with "images/HorizontalCover"|add:n.get_image_name|add:".jpg" as image_static%}
+                <img src={% static images_static %} alt="banner img">
+                {%endwith%}
                 <!-- Poner las fotos de proporcion 460x215 aquí. Al clicar debería llevarte a la pagina de store de este juego-->
             </a>
         </div>
@@ -46,7 +48,10 @@ Esto es, si yo pongo en el buscador "Fallout", en vez de SEARCH, debería poner 
                 <span class="price-new">{{n.price}}€</span>
                 <!-- Precio nuevo -->
             </div>
-                <a href="./games/{{games_list[forloop.parentloop.counter0][forloop.counter0].get_url_name}}" class="btn btn-card">Comprar</a>
+               
+                <a href="{% url 'game' n.get_url_name %}" class="btn btn-card">Comprar</a>
+           
+                
                 <!-- Boton de compra. Debería llevarte a la pagina de store de este juego -->
         </div>
     {% else %}
@@ -56,15 +61,15 @@ Esto es, si yo pongo en el buscador "Fallout", en vez de SEARCH, debería poner 
         {%else%}
             <div class="gamePrices">                  
                 <div class="discount-prices">
-                    <span class="price">{{n.price * 0.01}}€</span>
+                    <span class="price">{{n.price}}€</span>
                         <!-- Precio -->
                 </div>
-                    <a href="./games/{{games_list[forloop.parentloop.counter0][forloop.counter0].get_url_name}}" class="btn btn-card">Comprar</a>      
+                    <a href="{% url 'game' n.get_url_name %}" class="btn btn-card">Comprar</a>      
                     <!-- Boton de compra. Debería llevarte a la pagina de store de este juego -->           
             </div>
         {%endif%}
     {%endif%}
-{%end for%}
+{%endfor%}
 
 
 {%endblock pageBody%}   
