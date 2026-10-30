@@ -30,7 +30,7 @@ class Sale_event(models.Model):
 
 class Game(models.Model):
     title = models.CharField(max_length=50)
-    sort_description = models.CharField(max_length=300)
+    short_description = models.CharField(max_length=300)
     price = models.PositiveSmallIntegerField()
     tags = models.ManyToManyField(Tag)
     realese_date = models.DateField()
