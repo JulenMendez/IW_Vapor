@@ -1,6 +1,6 @@
 #bigOffer{
     width : 940px;
-    height: 125px;
+    height: 430px;
 }
 
 .card-img{
@@ -36,4 +36,9 @@
 #logo_img{
     width : 176px; 
     height : 100px; 
+}
+
+.categoryAndDeveloperImage{
+    height: 250px;
+    align-items: center;
 }

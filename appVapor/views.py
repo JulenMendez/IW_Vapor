@@ -14,7 +14,6 @@ def index(request:HttpRequest):
     return render(request, 'shop/shop_main.html', context)
 
 
-
 def category(request:HttpRequest, category_name:str):
     return render(request, 'category.html')
 

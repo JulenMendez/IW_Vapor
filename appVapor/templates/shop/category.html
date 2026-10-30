@@ -5,14 +5,35 @@
 {% block title %}---{% endblock title%} <!--Poner de título el nombre de la categoria-->
 
 {%block pageBody%}
-<h2>FIRST PERSON SHOOTER</h2>
-        <div class="banner mb-40"> 
-            <a href="#"> 
-                <img src="https://placehold.co/940x125" alt="banner img">
+<h2>{{tag.name}}</h2>
+        <div class="mb-40"> 
+            <a> 
+                <img src={%static "/images/Categories/{{tag.get_image_name}}"%} alt="banner img" class="categoryAndDeveloperImage">
             </a>
         </div>
-        <h3 class="description">A video game subgenre focused on weapon-based combat and 3D navigation viewed directly through the eyes of the player's character</h3>
+        <h3 class="description">{{tag.description}}</h3>
+        
+        <div class="categoryContainer">
 
+        {%if games_list|length%3 == 0%}
+            {%if games_list|length/3 == 0%} 
+                {%for x in "a"%}
+                    <div class="banner banner-grid">            
+                        <a href="#">
+                            <img src="https://placehold.co/226x219" alt="banner img" class="categorySmallImg">
+                        </a>
+                        <a href="#">
+                            <img src="https://placehold.co/468x219" alt="banner img" class="categoryBigImg">
+                        </a>
+                        <a href="#">
+                            <img src="https://placehold.co/226x219" alt="banner img" class="categorySmallImg">
+                        </a>
+                    </div>
+                {%endfor%}
+            {%endif%}
+        {%endif%}
+
+        </div>
         <div class="categoryContainer">
             <div class="banner banner-grid">            
                 <a href="#">
@@ -25,17 +46,13 @@
                     <img src="https://placehold.co/226x219" alt="banner img" class="categorySmallImg">
                 </a>
             </div>
-            <div class="banner banner-grid mb-40">
-                <a href="#">
-                    <img src="https://placehold.co/468x219" alt="banner img" class="categoryBigImg">
-                </a>
-                <a href="#">
-                    <img src="https://placehold.co/226x219" alt="banner img" class="categorySmallImg">
-                </a> 
-                <a href="#">
-                    <img src="https://placehold.co/226x219" alt="banner img" class="categorySmallImg">
-                </a>
-            </div>
+            {%if foorloop.counter0== 0 or foorloop.counter0==2 or foorloop.counter0 == 3 or foorloop.counter0==4 or foorloop.counter0 == 6 or foorloop.counter0 == 8 or foorloop.counter0 == 9 or foorloop.counter0==10%}
+
+            {%else%}
+
+            {%end if%}
+        {%endfor%}
+        
             <!--Al ultimo banner banner-grid ponerle mb-40 para que haya hueco abajo-->    
 
             <!--Para Julen-->
