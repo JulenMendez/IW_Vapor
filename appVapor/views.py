@@ -60,4 +60,4 @@ def game(request:HttpRequest, game_name:str):
     if not isinstance(context["game"], models.Game):
         return HttpResponse(context["game"])
     
-    return render(request, 'shop/store.html', context)
+    return render(request, 'shop/store_main.html', context)

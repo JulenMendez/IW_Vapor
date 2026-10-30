@@ -12,7 +12,7 @@
         <div class="gameStorePage">
             <div class="carrusel">
                 <a href="#">
-                    {%with "images/Carrusel/"|add:game.get_image_name|add:"/"|add:game.get_image_name|add:".jpg" as image_static%}
+                    {%with "images/Carrusel/"|add:game.get_image_name|add:"/"|add:game.get_image_name|add:"0"|add:".jpg" as image_static%}
                         <img src={% static image_static %} alt="banner img" class="bigImageStoreGame">
                     {%endwith%}
                     <!-- La foto del juego que sea para el carrusel--> <!--HACER LO DE STATIC CUANDO SE PONGAN LAS FOTOS-->
@@ -34,13 +34,60 @@
                 </div>
 
                 <div class="etiquetas">
-                    {%for tag in game.tags%}
-                        <a href=# class="{{tag}}">{{tag.name}}</a>
+                    {%for tag in game.tags.get_queryset%}
+                        <a href=# class="btn btn-card">{{tag.name}}</a>
                     {%endfor%}
                 </div>
                 <!-- Mete las etiquetas QUE LE CORRESPONDAN AL JUEGO. Puedes quitar o meter -->
             </div>
         </div>             
+    </div>
+
+     <div class="storeContainer">       
+            <div class="words">
+                <h5 class="storeTitle">{{game.title}}</h5>
+                 <!-- El título del juego. OTRA VEZ -->
+                <p class="storeDesc">{{game.short_description}}</p>
+                 <!-- Mete la descripción CORTA que sea. OTRA VEZ -->
+            </div> 
+
+            {%if game.discount != 0%}
+                <!-- PARA LOS JUEGO CON DESCUENTO -->
+                <div class="priceContainer">
+                    <div class="discount">-{{game.discount}}</div>
+                    <!-- El descuento que haga falta -->
+                    <div class="prices">
+                        <span class="original">{{game.price}}€</span>
+                        <!-- Precio VIEJO -->
+                        <span class="new">{{game.price}}</span>
+                        <!-- Precio NUEVO -->
+                    </div>
+                
+                        <a href="#" class="btn btn-card">Comprar</a>
+                        <!-- Botón de comprar -->
+                    
+                </div>
+            {% else %}
+                <!-- PARA LOS JUEGOS SIN DESCUENTO -->
+                    <div class="priceContainer">
+                    <div class="prices">
+                        <span class="storePrice">{{game.price}}</span> 
+                        
+                    </div>
+                
+                    <a href="#" class="btn btn-card">Comprar</a>
+                    
+                    </div>
+            {%endif%}
+
+        </div>
+
+        <div class="aboutGame mb-20">
+            <h3 class="description">GAME DESCRIPTION</h3>
+            <!-- Esto se queda así -->
+            <p class="gameDesc">{{game.short_description}}</p>
+             <!-- La descripción del juego. OTRA VEZ -->
+        </div>
     </div>
 
 {%endblock pageBody%}
