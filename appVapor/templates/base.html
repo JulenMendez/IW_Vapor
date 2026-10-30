@@ -30,7 +30,7 @@
                     <label for="navToggle" class="navbar-toggler-icon"></label>  <!--This corresponds to the X: the image that appears in case of having a screen with width of 720 or less and we select the 3 lines-->
                 </li>
                 <li {%block shopNavBar%}class="navbar-item active"{%endblock shopNavBar%}> <!--VERY IMPORTANT: the active item should be the one where we are in the moment. The rest must be only navbar-items.-->
-                    <a class="navbar-link" href="#">Shop</a> 
+                    <a class="navbar-link" href="{% url "index"%}">Shop</a> 
                 </li>
             </ul>
         </div>
