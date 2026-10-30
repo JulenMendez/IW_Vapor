@@ -2,27 +2,60 @@
 
 {% load static %}
 
+{% load vapor_tags %}
+
 {% block title %}---{% endblock title%} <!--Poner de título el nombre del juego-->
 
 {%block pageBody%}
 <h2>{{developer.name}}</h2>
         <div class="mb-40"> 
             <a> 
-                <img src={%static "/images/Devs/{{developer.get_image_name}}"%} alt="banner img" class="categoryAndDeveloperImage">
+                
+                {%with "images/Devs/"|add:developer.get_image_name|add:".jpg" as image_static%}
+                    <img src={% static image_static %} alt="banner img" class="categoryAndDeveloperImage">
+                {%endwith%}
             </a>
         </div>
         <h3 class="description">{{developer.description}}</h3>
         <div class="categoryContainer">
-            <div class="banner banner-grid mb-40">            
-                <a href="#">
-                    <img src={%static "/images/HorizontalCover/games_list[0]"%} alt="banner img" class="categorySmallImg">
+            <div class="banner banner-grid mb-40">   
+                {%if games_list|length >= 1 %}
+                <a href="url 'game' games_list.get_url_name">
+                    {%with games_list|index:0 as index_data%}
+                        {%with "images/HorizontalCover/"|add:index_data.get_image_name|add:".jpg" as image_static%}
+                        <img src={% static image_static %} alt="banner img" class="categorySmallImg">
+                        {%endwith%}
+                       
+                    {%endwith%}
+                    
                 </a>
-                <a href="#">
-                    <img src={%static "/images/HorizontalCover/games_list[1]"%} alt="banner img" class="categoryBigImg">
+                {%endif%}
+
+                {%if games_list|length >= 2 %}
+                <a href="url 'game' n.get_url_name">
+                    {%with games_list|index:1 as index_data%}
+                    {%with "images/HorizontalCover/"|add:index_data.get_image_name|add:".jpg" as image_static%}
+                        <img src={% static image_static %} alt="banner img" class="categoryBigImg">
+                    {%endwith%}
+                   
+                    {%endwith%}
+                   
+                    
                 </a>
-                <a href="#">
-                    <img src={%static "/images/HorizontalCover/games_list[2]"%} alt="banner img" class="categorySmallImg">
+                {%endif%}
+
+                {%if games_list|length >= 3 %}
+                <a href="url 'game' n.get_url_name">
+                    
+                    {%with games_list|index:2 as index_data%}
+                    {%with "images/HorizontalCover/"|add:index_data.get_image_name|add:".jpg" as image_static%}
+                        <img src={% static image_static %} alt="banner img" class="categorySmallImg">
+                    {%endwith%}
+                   
+                     {%endwith%}
                 </a>
+                {%endif%}
+
             </div>
         </div>
             <!--Igual que en category.html: al ultimo banner banner-grid ponerle mb-40 para que haya hueco abajo-->    
@@ -33,4 +66,5 @@
             <!--En la descripcion hacer como con el titulo, el que le corresponda--> 
             <!--En las imagenes. Si hay 3 juegos en el developer, pues habra 3 imagenes. En caso de que un developer tenga 3 o mas juegos,
                 poner 3 juegos por linea hasta que llegue al numero total de los juegos del developer. Sino, poner los que haya para rellenar-->
-    </div>{%endblock pageBody%}
+
+</div>{%endblock pageBody%}

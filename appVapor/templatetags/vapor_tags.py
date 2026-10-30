@@ -3,7 +3,7 @@ register = template.Library()
 
 @register.filter
 def index(indexable, i):
-    try:
-        return indexable[i]
-    except:
-        return None
+
+    return indexable[i]
+
+ 
