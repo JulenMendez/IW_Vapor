@@ -37,3 +37,8 @@
     width : 176px; 
     height : 100px; 
 }
+
+.categoryAndDeveloperImage{
+    height: 250px;
+    align-items: center;
+}

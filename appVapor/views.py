@@ -5,7 +5,7 @@ from django.http import HttpRequest, QueryDict, HttpResponse
 
 
 def index(request:HttpRequest):
-    return render(request, 'shop/shop_main.html')
+    return render(request, 'shop/category.html')
 
 
 

@@ -9,8 +9,8 @@
         <!--The big sale-->
         <div class="banner mb-40">
             <h1>BIG SALE!</h1>
-            <a href="#"> <!--Change this for the final url destination-->
-                <img src={%static "images/HorizontalCover/{{big_sales}}"%} alt="banner img" id="bigOffer">
+            <a href="{{big_sales.get_url_name}}"> <!--Change this for the final url destination-->
+                <img src={%static "images/HorizontalCover/{{big_sales.get_image_name}}"%} alt="banner img" id="bigOffer">
             </a>
         </div>
 
@@ -19,8 +19,8 @@
         <div class="container mb-40">
             {%for m in games_list%}
             <div class="card">
-                <a href="./games/{{games_list[n][m]}}"> <!--Link to the game-->
-                    <img src={%static "images/VertivalCover/{{games_list[n][m].title}}.jpg"%} alt="Card Image" class="card-img"> <!--image of the game-->
+                <a href="./games/{{games_list[n][m].get_url_name}}"> <!--Link to the game-->
+                    <img src={%static "images/VertivalCover/{{games_list[n][m]get_image_name}}.jpg"%} alt="Card Image" class="card-img"> <!--image of the game-->
                 </a>
                 <div class="card-body">
                     <!--You add title, then a text (short desc)-->
