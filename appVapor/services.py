@@ -42,4 +42,46 @@ def get_shop_games() -> tuple[list[str], list[list[Game]]]:
         games_list.append(games)
         
     return title_list, games_list
-        
+
+
+
+
+
+def get_tag_by_name(tag_url_name:str) -> Tag:
+    tag_name = Tag.name_from_url(tag_url_name)
+    return get_object_or_404(Tag, name__iexact=tag_name)
+
+
+def get_games_by_tag(tag:Tag, limit:int):
+    games = Game.objects.filter(tags__in=tag).order_by("?")
+
+    if limit == -1:
+        return games
+    else:
+        return games[:limit]
+
+
+
+def get_dev_by_name(dev_url_name:str) -> Dev:
+    dev_name = Dev.name_from_url(dev_url_name)
+    return get_object_or_404(Dev, name__iexact=dev_name)
+
+
+def get_games_by_dev(dev:Dev, limit:int):
+    games = Game.objects.filter(dev=dev).order_by("?")
+
+    if limit == -1:
+        return games
+    else:
+        return games[:limit]
+
+
+
+def search_games_by_title(title:str):
+    games = Game.objects.filter(title__icontains=title).order_by("title")
+    return games
+
+
+def get_game_by_title(game_title_ulr:str):
+    game_title = Game.name_from_url(game_title_ulr)
+    return get_object_or_404(Game, title__iexact=game_title)

@@ -6,5 +6,6 @@ urlpatterns =  [
     path('category/<str:category_name>', views.category, name='category'),
     path('dev/<str:dev_name>', views.dev, name='dev'),
     path('search', views.search, name='search'),
+    path('games/<str:game_name>', views.game, name='game')
 ]
 
