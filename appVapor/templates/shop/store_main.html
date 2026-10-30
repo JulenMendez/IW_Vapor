@@ -1,0 +1,42 @@
+{% extends 'shop/store.html' %}
+
+{% load static %}
+
+{% block title %}game.title{% endblock title%}
+
+{%block pageBody%}
+<!--Page "body" starts here-->
+    <h2 class="storeHeader">{{game.title}}</h2> 
+
+    <div class="categoryContainer">
+        <div class="gameStorePage">
+            <div class="carrusel">
+                <a href="#">
+                    <img src="{%static "images/Carrusel/{{game.get_image_name}}/{{game.get_image_name}}0"%}" alt="carrusel img" class="bigImageStoreGame">
+                    <!-- La foto del juego que sea para el carrusel--> <!--HACER LO DE STATIC CUANDO SE PONGAN LAS FOTOS-->
+                </a>
+            </div>
+            <div class="derecha">
+                <div>
+                    <a href="#">
+                        <img src="{%static "images/HorizontalCover/{{game.get_image_name}}"%}" alt="banner img" class="smallImageStoreGame" >
+                        <!-- La foto del juego que le corresponda. Mismo ratio que las de 460x215-->
+                    </a>
+                </div>
+                <div class="descriptionStore">
+                    <p>{{game.short_description}}</p>
+                    <!-- Mete la descripción CORTA que sea -->
+
+                </div>
+
+                <div class="etiquetas">
+                    {%for tag in game.tags%}
+                        <a href=# class="{{tag}}">{{tag.name}}</a>
+                    {%endfor%}
+                </div>
+                <!-- Mete las etiquetas QUE LE CORRESPONDAN AL JUEGO. Puedes quitar o meter -->
+            </div>
+        </div>             
+    </div>
+
+{%endblock pageBody%}

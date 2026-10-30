@@ -12,49 +12,23 @@
             </a>
         </div>
         <h3 class="description">{{tag.description}}</h3>
-        
-        <div class="categoryContainer">
 
-        {%if games_list|length%3 == 0%}
-            {%if games_list|length/3 == 0%} 
-                {%for x in "a"%}
-                    <div class="banner banner-grid">            
-                        <a href="#">
-                            <img src="https://placehold.co/226x219" alt="banner img" class="categorySmallImg">
-                        </a>
-                        <a href="#">
-                            <img src="https://placehold.co/468x219" alt="banner img" class="categoryBigImg">
-                        </a>
-                        <a href="#">
-                            <img src="https://placehold.co/226x219" alt="banner img" class="categorySmallImg">
-                        </a>
-                    </div>
-                {%endfor%}
-            {%endif%}
-        {%endif%}
-
-        </div>
         <div class="categoryContainer">
-            <div class="banner banner-grid">            
+            <div class="banner banner-grid mb-40">            
                 <a href="#">
-                    <img src="https://placehold.co/226x219" alt="banner img" class="categorySmallImg">
+                    <img src={%static "/images/HorizontalCover/games_list[0]"%} alt="banner img" class="categorySmallImg">
                 </a>
                 <a href="#">
-                    <img src="https://placehold.co/468x219" alt="banner img" class="categoryBigImg">
+                    <img src={%static "/images/HorizontalCover/games_list[1]"%} alt="banner img" class="categoryBigImg">
                 </a>
                 <a href="#">
-                    <img src="https://placehold.co/226x219" alt="banner img" class="categorySmallImg">
+                    <img src={%static "/images/HorizontalCover/games_list[2]"%} alt="banner img" class="categorySmallImg">
                 </a>
             </div>
-            {%if foorloop.counter0== 0 or foorloop.counter0==2 or foorloop.counter0 == 3 or foorloop.counter0==4 or foorloop.counter0 == 6 or foorloop.counter0 == 8 or foorloop.counter0 == 9 or foorloop.counter0==10%}
-
-            {%else%}
-
-            {%end if%}
-        {%endfor%}
-        
+        </div>
             <!--Al ultimo banner banner-grid ponerle mb-40 para que haya hueco abajo-->    
 
+            <!--NOTA: pasarlo a este nivel de detalle después de la entrega intermedia-->
             <!--Para Julen-->
             <!--Es una plantilla de buscar juegos de cierto genero. Maximo 12 juegos. 3 por fila--> 
             <!--En el banner debe estar la foto de banner del genero. Esto es, habra una foto del tamaño del de la plantilla que habra que poner ahi-->
