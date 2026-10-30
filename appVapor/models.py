@@ -8,6 +8,14 @@ class Tag(models.Model):
     def __str__(self):
         return self.name
 
+    def get_image_name(self) -> str:
+        low:str = self.name.lower()
+        return "".join(low.split(" "))
+
+    def get_url_name(self) -> str:
+        low:str = self.name.lower()
+        return "-".join(low.split(" "))
+
 
 class Dev(models.Model):
     name = models.CharField(max_length=50)
@@ -15,6 +23,14 @@ class Dev(models.Model):
 
     def __str__(self):
         return self.name
+    
+    def get_image_name(self) -> str:
+        low:str = self.name.lower()
+        return "".join(low.split(" "))
+
+    def get_url_name(self) -> str:
+        low:str = self.name.lower()
+        return "-".join(low.split(" "))
 
 
 class Sale_event(models.Model):
@@ -26,6 +42,9 @@ class Sale_event(models.Model):
 
     def __str__(self):
         return self.name
+
+
+
 
 
 class Game(models.Model):
@@ -40,4 +59,13 @@ class Game(models.Model):
 
     def __str__(self):
         return self.title
+
+    def get_image_name(self) -> str:
+        low:str = self.title.lower()
+        return "".join(low.split(" "))
+
+    def get_url_name(self) -> str:
+        low:str = self.title.lower()
+        return "-".join(low.split(" "))
+
 

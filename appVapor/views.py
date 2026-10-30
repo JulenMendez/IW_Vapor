@@ -1,11 +1,17 @@
 from django.shortcuts import render
 from django.http import HttpRequest, QueryDict, HttpResponse
+from . import services
 
 # Create your views here.
 
 
+
 def index(request:HttpRequest):
-    return render(request, 'shop/shop_main.html')
+    context:dict = {}
+    context["big_sales"] = services.get_big_sale()
+    context["title_list"], context["games_list"] = services.get_shop_games()
+    
+    return render(request, 'shop/shop_main.html', context)
 
 
 
