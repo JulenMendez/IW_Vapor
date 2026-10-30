@@ -35,8 +35,8 @@ def get_shop_games() -> tuple[list[str], list[list[Game]]]:
         query = queries[i]
 
         games = []
-        for n in range(3):
-            games.append(query[n])
+        for game in query:
+            games.append(game)
 
         title_list.append(title)
         games_list.append(games)
