@@ -4,7 +4,7 @@
 
 {% block title %}---{% endblock title%} <!--Poner de título el nombre del juego-->
 {%block pageBody%}
-<h2 class="searchHeader">SEARCH</h2>
+
 
 <!-- JULEN -->
 <!-- el h2 en el que pone SEARCH es solo de referencia. Debería tener la misma palabra que lo que sea que haya buscado el usuario
@@ -12,78 +12,59 @@ Esto es, si yo pongo en el buscador "Fallout", en vez de SEARCH, debería poner 
 
 
 <!-- Para los juegos con descuento -->
-<div class="search-item">
-    <div class="imag-search">
-        <a href="#">
-            <img src="https://placehold.co/230x108" alt="banner img">
-            <!-- Poner las fotos de proporcion 460x215 aquí. Al clicar debería llevarte a la pagina de store de este juego-->
-        </a>
+
+{%for n in game_list%}
+    <h2 class="searchHeader">{{game_list[forloop.counter0]}}</h2>
+    <div class="search-item">
+        <div class="imag-search">
+            <a href="./games/{{games_list[forloop.parentloop.counter0][forloop.counter0].get_url_name}}">
+                <img src={%static "images/HorizontalCover/{{games_list[forloop.parentloop.counter0][forloop.counter0]get_image_name}}.jpg"%} alt="banner img">
+                <!-- Poner las fotos de proporcion 460x215 aquí. Al clicar debería llevarte a la pagina de store de este juego-->
+            </a>
+        </div>
+        <div class="info-search">
+            <div class="gameTitle">
+                <h5 class="gameTitle">{{games_list[forloop.parentloop.counter0][forloop.counter0].title}}</h5>
+                    <!-- Pon el título del juego -->
+            </div>
+            <div class="gameDescription">
+                <p class="gameDesc">{{games_list[forloop.parentloop.counter0][forloop.counter0].short_description}}</p>
+                    <!-- Pon la descripcion del juego -->
+            </div>
+            
+        </div>
+        {%end for%}
     </div>
-    <div class="info-search">
-        <div class="gameTitle">
-            <h5 class="gameTitle">TITLE</h5>
-                <!-- Pon el título del juego -->
-        </div>
-        <div class="gameDescription">
-            <p class="gameDesc">Wolfenstein®: The New OrderTM revitaliza    
-                la serie que creó el género de los shooters en primera persona. 
-                MachineGames, un estudio compuesto por un veterano grupo de desarrolladores 
-                muy laureados por su labor creando juegos impulsados por la trama, 
-                han sido los encargados de desarrollar Wolfenstein, que ofrece una elaborada narrativa repleta de acción, 
-                aventura y combate en primera persona.</p>
-                <!-- Pon la descripcion del juego -->
-        </div>
+    {%if games_list[n][forloop.counter0].discount != 0%}
         <div class="gamePrices">
-            <div class="discount">-25%</div>
+            <div class="discount">{{games_list[forloop.parentloop.counter0][forloop.counter0].discount}}</div>
             <!-- El descuento del juego -->
             <div class="discount-prices">
-                <span class="price-original">19,50€</span>
+                <span class="price-original">{{games_list[forloop.parentloop.counter0][forloop.counter0].price/100}}€</span>
                 <!--  Precio viejo-->
-                <span class="price-new">14,62€</span>
+                <span class="price-new">{{(games_list[forloop.parentloop.counter0][forloop.counter0].price/100)(games_list[n][m].price * games_list[n][m].discount)/10000}}€</span>
                 <!-- Precio nuevo -->
             </div>
-        
                 <a href="#" class="btn btn-card">Comprar</a>
                 <!-- Boton de compra. Debería llevarte a la pagina de store de este juego -->
-        
         </div>
-    </div>
-</div>
-
-<!-- Para los juegos sin descuento -->
-
-<div class="search-item">
-    <div class="imag-search">
-        <a href="#">
-            <img src="https://placehold.co/230x108" alt="banner img">
-            <!-- Poner las fotos de proporcion 460x215 aquí. Al clicar debería llevarte a la pagina de store de este juego-->
-        </a>
-        
-    </div>
-    <div class="info-search">
-        <div class="gameTitle">
-            <h5 class="gameTitle">TITLE</h5>
-                <!-- Pon el título del juego -->
-        </div>
-        <div class="gameDescription">
-            <p class="gameDesc">Wolfenstein®: The New OrderTM revitaliza    
-                la serie que creó el género de los shooters en primera persona. 
-                MachineGames, un estudio compuesto por un veterano grupo de desarrolladores 
-                muy laureados por su labor creando juegos impulsados por la trama, 
-                han sido los encargados de desarrollar Wolfenstein, que ofrece una elaborada narrativa repleta de acción, 
-                aventura y combate en primera persona.</p>
-                        <!-- Pon la descripcion del juego -->
-        </div>
-        <div class="gamePrices">                  
-            <div class="discount-prices">
-                <span class="price">14,62€</span>
-                    <!-- Precio -->
+    {% else %}
+        {%if games_list[n][forloop.counter0].price == 0%}
+            <span class="price">Free</span>
+            <a href="#" class="btn btn-card">Comprar</a> 
+        {%else%}
+            <div class="gamePrices">                  
+                <div class="discount-prices">
+                    <span class="price">{{games_list[forloop.parentloop.counter0][forloop.counter0].price/100}}€</span>
+                        <!-- Precio -->
+                </div>
+                    <a href="#" class="btn btn-card">Comprar</a>      
+                    <!-- Boton de compra. Debería llevarte a la pagina de store de este juego -->           
             </div>
-                <a href="#" class="btn btn-card">Comprar</a>      
-                <!-- Boton de compra. Debería llevarte a la pagina de store de este juego -->           
-        </div>
-    </div>
-</div>
+        {%endif%}
+    {%endif%}
+{%end for%}
+
 
 {%endblock pageBody%}   
         
