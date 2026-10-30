@@ -12,14 +12,18 @@
         <div class="gameStorePage">
             <div class="carrusel">
                 <a href="#">
-                    <img src="{%static "images/Carrusel/{{game.get_image_name}}/{{game.get_image_name}}0"%}" alt="carrusel img" class="bigImageStoreGame">
+                    {%with "images/Carrusel/"|add:game.get_image_name|add:"/"|add:game.get_image_name|add:".jpg" as image_static%}
+                        <img src={% static image_static %} alt="banner img" class="bigImageStoreGame">
+                    {%endwith%}
                     <!-- La foto del juego que sea para el carrusel--> <!--HACER LO DE STATIC CUANDO SE PONGAN LAS FOTOS-->
                 </a>
             </div>
             <div class="derecha">
                 <div>
                     <a href="#">
-                        <img src="{%static "images/HorizontalCover/{{game.get_image_name}}"%}" alt="banner img" class="smallImageStoreGame" >
+                        {%with "images/HorizontalCover/"|add:game.get_image_name|add:".jpg" as image_static%}
+                            <img src={% static image_static %} alt="banner img" class="smallImageStoreGame">
+                        {%endwith%}
                         <!-- La foto del juego que le corresponda. Mismo ratio que las de 460x215-->
                     </a>
                 </div>
