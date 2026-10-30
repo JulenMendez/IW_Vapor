@@ -14,13 +14,13 @@ Esto es, si yo pongo en el buscador "Fallout", en vez de SEARCH, debería poner 
 <!-- Para los juegos con descuento -->
 <h2 class="searchHeader">HEADER</h2>
 
-{%for n in game_list%}
+{%for n in games_list%}
     
     <div class="search-item">
         <div class="imag-search">
             <a href="{% url 'game' n.get_url_name %}">
-                {%with "images/HorizontalCover"|add:n.get_image_name|add:".jpg" as image_static%}
-                <img src={% static images_static %} alt="banner img">
+                {%with "images/HorizontalCover/"|add:n.get_image_name|add:".jpg" as image_static%}
+                <img src={% static image_static %} alt="banner img" class="searchImage">
                 {%endwith%}
                 <!-- Poner las fotos de proporcion 460x215 aquí. Al clicar debería llevarte a la pagina de store de este juego-->
             </a>
@@ -31,14 +31,10 @@ Esto es, si yo pongo en el buscador "Fallout", en vez de SEARCH, debería poner 
                     <!-- Pon el título del juego -->
             </div>
             <div class="gameDescription">
-                <p class="gameDesc">{{n.gameDesc}}</p>
+                <p class="gameDesc">{{n.short_description}}</p>
                     <!-- Pon la descripcion del juego -->
             </div>
-            
-        </div>
-
-    </div>
-    {%if n.discount != 0%}
+            {%if n.discount != 0%}
         <div class="gamePrices">
             <div class="discount">{{n.discount}}</div>
             <!-- El descuento del juego -->
@@ -48,16 +44,17 @@ Esto es, si yo pongo en el buscador "Fallout", en vez de SEARCH, debería poner 
                 <span class="price-new">{{n.price}}€</span>
                 <!-- Precio nuevo -->
             </div>
-               
-                <a href="{% url 'game' n.get_url_name %}" class="btn btn-card">Comprar</a>
-           
-                
+                <a href="{% url 'game' n.get_url_name %}" class="btn btn-card">Comprar</a> 
                 <!-- Boton de compra. Debería llevarte a la pagina de store de este juego -->
         </div>
     {% else %}
         {%if n.price == 0%}
-            <span class="price">Free</span>
+        <div class="gamePrices"> 
+            <div class="discount-prices">
+                    <span class="price">Free</span>
+                </div>
             <a href="#" class="btn btn-card">Comprar</a> 
+        </div>
         {%else%}
             <div class="gamePrices">                  
                 <div class="discount-prices">
@@ -69,6 +66,9 @@ Esto es, si yo pongo en el buscador "Fallout", en vez de SEARCH, debería poner 
             </div>
         {%endif%}
     {%endif%}
+        </div>
+    </div>
+    
 {%endfor%}
 
 
