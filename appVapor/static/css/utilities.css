@@ -201,7 +201,6 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 .gamePrices{
     display: flex;
     justify-content: right;
-    align-items: right;
 }
 .discount{
     background-color: var(--card-price-sale-bg);
@@ -270,7 +269,6 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 .priceContainer{
     display: flex;
     justify-content: right;
-    align-items: right;
 }
 
 
