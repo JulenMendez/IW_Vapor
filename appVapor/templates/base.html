@@ -20,7 +20,7 @@
             </div>
             <div class="navbar-logo">
                 <a href="https://store.steampowered.com/?snr=1_5_9__global-header">
-                    <img src={%static "images/steam_logo.png"%}
+                    <img src="{% static 'images/steam_logo.png' %}"
                         alt="logo" id="logo_img">
                 </a>
             </div>
@@ -30,7 +30,7 @@
                     <label for="navToggle" class="navbar-toggler-icon"></label>  <!--This corresponds to the X: the image that appears in case of having a screen with width of 720 or less and we select the 3 lines-->
                 </li>
                 <li {%block shopNavBar%}class="navbar-item active"{%endblock shopNavBar%}> <!--VERY IMPORTANT: the active item should be the one where we are in the moment. The rest must be only navbar-items.-->
-                    <a class="navbar-link" href="{% url "index"%}">Shop</a> 
+                    <a class="navbar-link" href="{% url 'index' %}">Shop</a> 
                 </li>
             </ul>
         </div>

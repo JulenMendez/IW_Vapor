@@ -22,8 +22,8 @@
             <div class="banner banner-grid mb-40">            
                 
                 {%if games_list|length >= 1 %}
-                <a href="url'game'games_list.get_url_name">
-                    {%with games_list|index:0 as index_data%}
+                {%with games_list|index:0 as index_data%}
+                <a href="{% url 'game' index_data.get_url_name %}">
                         {%with "images/HorizontalCover/"|add:index_data.get_image_name|add:".jpg" as image_static%}
                         <img src={% static image_static %} alt="banner img" class="categorySmallImg">
                         {%endwith%}
@@ -34,8 +34,8 @@
                 {%endif%}
 
                 {%if games_list|length >= 2 %}
-                <a href="url'game'n.get_url_name">
-                    {%with games_list|index:1 as index_data%}
+                {%with games_list|index:1 as index_data%}
+                <a href="{% url 'game' index_data.get_url_name %}">
                     {%with "images/HorizontalCover/"|add:index_data.get_image_name|add:".jpg" as image_static%}
                         <img src={% static image_static %} alt="banner img" class="categoryBigImg">
                     {%endwith%}
@@ -47,9 +47,9 @@
                 {%endif%}
 
                 {%if games_list|length >= 3 %}
-                <a href="url'game'n.get_url_name">
+                {%with games_list|index:2 as index_data%}
+                <a href="{% url 'game' index_data.get_url_name %}">
                     
-                    {%with games_list|index:2 as index_data%}
                     {%with "images/HorizontalCover/"|add:index_data.get_image_name|add:".jpg" as image_static%}
                         <img src={% static image_static %} alt="banner img" class="categorySmallImg">
                     {%endwith%}
