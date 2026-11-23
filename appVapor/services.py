@@ -16,7 +16,7 @@ def get_shop_games() -> tuple[list[str], list[list[Game]]]:
     queries:list = [
         Game.objects.exclude(discount=0).order_by("?")[:3],
         Game.objects.filter(price=0).order_by("?")[:3],
-        Game.objects.filter(tags__name="Acción").order_by("?")[:3],
+        Game.objects.filter(tags__name="Accion").order_by("?")[:3],
         Game.objects.filter(tags__name="FPS").order_by("?")[:3],
         Game.objects.filter(price__lt=2000)[:3],
         Game.objects.order_by("-realese_date")[:3]

@@ -3,7 +3,7 @@
 {% load static %}
 {%load vapor_tags%}
 
-{% block title %}---{% endblock title%} <!--Poner de título el nombre de la categoria-->
+{% block title %}{{tag.name}}{% endblock title%} <!--Poner de título el nombre de la categoria-->
 
 {%block pageBody%}
 <h1>{{tag.name}}</h1>

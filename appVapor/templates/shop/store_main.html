@@ -2,7 +2,7 @@
 
 {% load static %}
 
-{% block title %}game.title{% endblock title%}
+{% block title %}{{game.title}}{% endblock title%}
 
 {%block pageBody%}
 <!--Page "body" starts here-->
@@ -35,7 +35,7 @@
 
                 <div class="etiquetas">
                     {%for tag in game.tags.get_queryset%}
-                        <a href=# class="btn btn-card">{{tag.name}}</a>
+                        <a href={% url 'category' tag.get_url_name %} class="btn btn-card">{{tag.name}}</a>
                     {%endfor%}
                 </div>
                 <!-- Mete las etiquetas QUE LE CORRESPONDAN AL JUEGO. Puedes quitar o meter -->

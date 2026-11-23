@@ -2,7 +2,7 @@
 
 {% load static %}
 
-{% block title %}---{% endblock title%} <!--Poner de título el nombre del juego-->
+{% block title %}search-game{% endblock title%} <!--Poner de título el nombre del juego-->
 {%block pageBody%}
 
 
@@ -12,7 +12,7 @@ Esto es, si yo pongo en el buscador "Fallout", en vez de SEARCH, debería poner 
 
 
 <!-- Para los juegos con descuento -->
-<h1 class="searchHeader">HEADER</h1>
+<h1 class="searchHeader">RESULTADOS DE BÚSQUEDA</h1>
 
 {%for n in games_list%}
     
@@ -53,7 +53,7 @@ Esto es, si yo pongo en el buscador "Fallout", en vez de SEARCH, debería poner 
             <div class="discount-prices">
                     <span class="price">Free</span>
                 </div>
-            <a href="#" class="btn btn-card">Comprar</a> 
+            <a href="{% url 'game' n.get_url_name %}" class="btn btn-card">Comprar</a> 
         </div>
         {%else%}
             <div class="gamePrices">                  
