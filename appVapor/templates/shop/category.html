@@ -7,8 +7,7 @@
 
 {%block pageBody%}
 <h1>{{tag.name}}</h1>
-        <div class="mb-40"> 
-            
+        <div class="container mb-40"> 
             <a> 
                 {%with "images/Categories/"|add:tag.get_image_name|add:".jpg" as image_static%}
                     <img src={% static image_static %} alt="banner img" class="categoryAndDeveloperImage">

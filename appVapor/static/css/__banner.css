@@ -17,7 +17,7 @@
 
 .banner.banner-grid {
     display: flex; /*From left to right fill the hole line*/
-    justify-content: space-between;/*Distribute items equally: the first one at the beginning, and the last one at the end.*/
+    justify-content: flex-start;/*Distribute items equally: the first one at the beginning, and the last one at the end.*/
 
 }
 
