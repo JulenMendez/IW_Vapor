@@ -1,0 +1,54 @@
+{% extends 'shop/base_shop.html' %}
+
+{% load static %}
+
+{%for n in games_list%}
+    
+    <div class="search-item">
+        <div class="imag-search">
+            <a href="{% url 'game' n.get_url_name %}">
+                {%with "images/HorizontalCover/"|add:n.get_image_name|add:".jpg" as image_static%}
+                <img src={% static image_static %} alt="banner img" class="searchImage">
+                {%endwith%}
+                <!-- Poner las fotos de proporcion 460x215 aquí. Al clicar debería llevarte a la pagina de store de este juego-->
+            </a>
+        </div>
+        <div class="info-search">
+            <div class="gameTitle">
+                <h2 class="gameTitle">{{n.title}}</h2>
+                    <!-- Pon el título del juego -->
+            </div>
+    {%if n.discount != 0%}
+        <div class="gamePrices">
+            <div class="discount">{{n.discount}}</div>
+            <!-- El descuento del juego -->
+            <div class="discount-prices">
+                <span class="price-original">{{n.price}}€</span>
+                <!--  Precio viejo-->
+                <span class="price-new">{{n.price}}€</span>
+                <!-- Precio nuevo -->
+            </div>
+                <a href="{% url 'game' n.get_url_name %}" class="btn btn-card">Comprar</a> 
+                <!-- Boton de compra. Debería llevarte a la pagina de store de este juego -->
+        </div>
+    {% else %}
+        {%if n.price == 0%}
+        <div class="gamePrices"> 
+            <div class="discount-prices">
+                    <span class="price">Free</span>
+                </div>
+            <a href="{% url 'game' n.get_url_name %}" class="btn btn-card">Comprar</a> 
+        </div>
+        {%else%}
+            <div class="gamePrices">                  
+                <div class="discount-prices">
+                    <span class="price">{{n.price}}€</span>
+                        <!-- Precio -->
+                </div>          
+            </div>
+        {%endif%}
+    {%endif%}
+        </div>
+    </div>
+        
+        
