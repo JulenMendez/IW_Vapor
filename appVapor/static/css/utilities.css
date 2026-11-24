@@ -331,3 +331,26 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
     background: var(--card-price-bg);
     color: #fff;
 }
+
+
+
+/* Search preview */
+.search-preview {
+    position: absolute;
+    top: 40px;
+    min-width: 167px;
+    visibility: visible;
+    opacity: 1;
+    /* transition: visibility 0s linear .2s,opacity .2s linear; */
+    background: var(--menubar-dropdown-bg);
+    padding: 8px 5px 8px 5px;
+    font-weight: normal;
+    font-size: 13px;
+    z-index: 150;
+}
+
+.search-container {
+    /* height: 100%; */
+    display: flex;
+    align-items: center;
+}

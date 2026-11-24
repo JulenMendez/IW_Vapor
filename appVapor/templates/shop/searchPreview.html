@@ -1,7 +1,6 @@
-{% extends 'shop/base_shop.html' %}
-
 {% load static %}
 
+<div class="search-preview">
 {%for n in games_list%}
     
     <div class="search-item">
@@ -28,7 +27,6 @@
                 <span class="price-new">{{n.price}}€</span>
                 <!-- Precio nuevo -->
             </div>
-                <a href="{% url 'game' n.get_url_name %}" class="btn btn-card">Comprar</a> 
                 <!-- Boton de compra. Debería llevarte a la pagina de store de este juego -->
         </div>
     {% else %}
@@ -37,7 +35,6 @@
             <div class="discount-prices">
                     <span class="price">Free</span>
                 </div>
-            <a href="{% url 'game' n.get_url_name %}" class="btn btn-card">Comprar</a> 
         </div>
         {%else%}
             <div class="gamePrices">                  
@@ -50,5 +47,5 @@
     {%endif%}
         </div>
     </div>
-        
-        
+{%endfor%}        
+</div>
