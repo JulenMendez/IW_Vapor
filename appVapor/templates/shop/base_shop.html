@@ -2,6 +2,15 @@
 
 {% load static %}
 
+{% block js %}
+
+<script type="text/javascript" src="{% static 'js/jquery.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/search_preview.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/price_formater.js' %}"></script>
+
+
+{% endblock js %}
+
 {% block title %}Shop{% endblock title%}
 
 {%block shopNavBar%}class="navbar-item active"{%endblock shopNavBar%}
@@ -69,7 +78,7 @@
                     </div>
                 </div>
                 <div class="menubar-spacer"></div>
-                <div>
+                <div class="search-container">
                     <form action="/search" method="get" class="menubar-search">
                         <input type="search" name="name" id="search" placeholder="Search">
                         <button type = "submit"> <img src={% static "images/searchButton.png" %} alt = "search button"></button>

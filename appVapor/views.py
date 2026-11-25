@@ -61,3 +61,18 @@ def game(request:HttpRequest, game_name:str):
         return HttpResponse(context["game"])
     
     return render(request, 'shop/store_main.html', context)
+
+
+
+
+
+
+def ajax_search_preview(request:HttpRequest):
+    query_string:str = request.META.get('QUERY_STRING', '')
+    query_dict:QueryDict = QueryDict(query_string, encoding="UTF-8")
+    name:str = query_dict.get('name', '')
+
+    context:dict = {}
+    context["games_list"] = services.search_games_by_title(name)[:3]
+
+    return render(request, 'shop/searchPreview.html', context)
