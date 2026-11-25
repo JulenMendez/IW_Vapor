@@ -38,14 +38,14 @@
                         {%if the_game.discount != 0%}
                             <div class="card-price-discount">{{the_game.discount}}</div> <!--discount-->
                             <div class="card-discount-prices">
-                                <span class="card-price-original" class="format-price">{{the_game.price}}€</span> <!--original price-->
-                                <span class="card-price-new" class="format-price">{{the_game.price}}€</span> <!--discounted price-->
+                                <span class="card-price-original format-price">{{the_game.price}}€</span> <!--original price-->
+                                <span class="card-price-new format-price">{{the_game.price}}€</span> <!--discounted price-->
                             </div>
                         {% else %}
                             {%if the_game.price == 0%}
                                 <span class="card-pricetag">Free</span>
                             {%else%}
-                                <span class="card-pricetag" class="format-price">{{the_game.price}}€</span>
+                                <span class="card-pricetag format-price">{{the_game.price}}€</span>
                             {%endif%}
                         {%endif%}
                     </div>
