@@ -57,9 +57,9 @@
                     <div class="discount">-{{game.discount}}</div>
                     <!-- El descuento que haga falta -->
                     <div class="prices">
-                        <span class="format-price">{{game.price}}€</span>
+                        <span class="original" class="format-price">{{game.price}}€</span>
                         <!-- Precio VIEJO -->
-                        <span class="format-price">{{game.price}}</span>
+                        <span class="new" class="format-price">{{game.price}}</span>
                         <!-- Precio NUEVO -->
                     </div>
                 
@@ -70,7 +70,7 @@
             {% else %}
                 <!-- PARA LOS JUEGOS SIN DESCUENTO -->
                     <div class="priceContainer">
-                        <div class="prices">
+                        <div class="storePrice" class="prices">
                             <span class="format-price">{{game.price}}</span> 
                             
                         </div>

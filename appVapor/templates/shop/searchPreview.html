@@ -22,9 +22,9 @@
             <div class="discount">{{n.discount}}</div>
             <!-- El descuento del juego -->
             <div class="discount-prices">
-                <span class="format-price">{{n.price}}€</span>
+                <span class="price-original" class="format-price">{{n.price}}€</span>
                 <!--  Precio viejo-->
-                <span class="format-price">{{n.price}}€</span>
+                <span class="price-new" class="format-price">{{n.price}}€</span>
                 <!-- Precio nuevo -->
             </div>
                 <!-- Boton de compra. Debería llevarte a la pagina de store de este juego -->
@@ -39,7 +39,7 @@
         {%else%}
             <div class="gamePrices">                  
                 <div class="discount-prices">
-                    <span class="format-price">{{n.price}}€</span>
+                    <span class="price" class="format-price">{{n.price}}€</span>
                         <!-- Precio -->
                 </div>          
             </div>
