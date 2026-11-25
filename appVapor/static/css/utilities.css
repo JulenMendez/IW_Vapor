@@ -331,3 +331,99 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
     background: var(--card-price-bg);
     color: #fff;
 }
+
+/* ////////////////////////// */
+
+.comentario{
+    background-color: #182731;
+    display:flex;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.usuario{
+    display: flex;
+    width: 30%;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+.resenya{
+    display: block;
+    width: 70%;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-right: 10px;
+}
+
+.recomendacion{
+    background-color: #0e1c25;
+    display:flex;
+}
+.recomendacion img{
+    height: 100%;
+}
+
+.infoUsuario p{
+    padding-left: 10px;
+    margin-top: 0;
+}
+
+.fuenteU1{
+    color: #acdbf5;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.fuenteU2{
+    color: #acdbf5;
+    font: bold;
+    font-size: 60%;
+}
+
+.infoRecom p{
+    padding-left: 10px;
+    margin-top: 0;
+}
+
+.fuenteR1{
+    color: #fbfeff;
+    font-weight: 400;
+    font-size: 140%;
+    margin-bottom: 0;
+}
+
+.fuenteR2{
+    color: #a6acaf;
+    font: bold;
+    font-size: 80%;
+    margin-top: 0;
+}
+
+.fuenteT{
+    color: #6b7179;
+    font: bold;
+    font-size: 80%;
+}
+
+.fuenteC{
+    color: #b2b3b3;
+    font: bold;
+}
+
+.fotoU img{
+    border: 4px solid #959494
+}
+
+.botonesReseña{
+    margin-bottom: 10px;
+    display: flex;
+
+}
+
+.botonesReseña button{
+    border: 0;
+    background-color: #223745;
+    color: #1a8bee;
+    margin-right: 5px;
+}
