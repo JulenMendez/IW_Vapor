@@ -39,9 +39,9 @@ Esto es, si yo pongo en el buscador "Fallout", en vez de SEARCH, debería poner 
             <div class="discount">{{n.discount}}</div>
             <!-- El descuento del juego -->
             <div class="discount-prices">
-                <span class="price-original">{{n.price}}€</span>
+                <span class="format-price">{{n.price}}€</span>
                 <!--  Precio viejo-->
-                <span class="price-new">{{n.price}}€</span>
+                <span class="format-price">{{n.price}}€</span>
                 <!-- Precio nuevo -->
             </div>
                 <a href="{% url 'game' n.get_url_name %}" class="btn btn-card">Comprar</a> 
@@ -58,7 +58,7 @@ Esto es, si yo pongo en el buscador "Fallout", en vez de SEARCH, debería poner 
         {%else%}
             <div class="gamePrices">                  
                 <div class="discount-prices">
-                    <span class="price">{{n.price}}€</span>
+                    <span class="format-price">{{n.price}}€</span>
                         <!-- Precio -->
                 </div>
                     <a href="{% url 'game' n.get_url_name %}" class="btn btn-card">Comprar</a>      
