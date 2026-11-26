@@ -1,6 +1,8 @@
 {% load static %}
 
 <div class="search-preview">
+{% if games_list|length != 0 %}
+
 {%for n in games_list%}
     
     <div class="search-item">
@@ -47,5 +49,9 @@
     {%endif%}
         </div>
     </div>
-{%endfor%}        
+{%endfor%} 
+
+{%else%}
+    <p>No hay resultados</p>
+{%endif%}
 </div>
