@@ -76,3 +76,13 @@ def ajax_search_preview(request:HttpRequest):
     context["games_list"] = services.search_games_by_title(name)[:3]
 
     return render(request, 'shop/searchPreview.html', context)
+
+
+
+def qtip_game_desc(request:HttpRequest, game_name:str):
+    game_desc:str = services.get_game_by_title(game_name).short_description
+    
+    return HttpResponse(game_desc)
+
+
+

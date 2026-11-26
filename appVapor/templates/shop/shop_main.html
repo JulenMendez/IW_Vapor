@@ -3,6 +3,11 @@
  {% load static %}
 {% load vapor_tags %}
 
+{% block jsShop %}
+<script type="text/javascript" src="{% static 'js/qtip.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/desc_qtip.js' %}"></script>
+{% endblock jsShop %}
+
 {% block title %}Shop{% endblock title%}
 
  {%block pageBody%}
@@ -22,7 +27,7 @@
         <h2>{{title_list|index:forloop.counter0}}</h2> <!--name of the section. Important: 3 or less cards per game-->
         <div class="container mb-40">
             {%for m in games_list|index:forloop.counter0%}
-            <div class="card">
+            <div class="card desc-tooltip">
             {%with games_list|index:forloop.parentloop.counter0|index:forloop.counter0 as the_game%}
                 {%with "images/VerticalCover/"|add:the_game.get_image_name|add:".jpg" as image_static%}
                 <a href="./games/{{the_game.get_url_name}}"> <!--Link to the game-->
@@ -32,7 +37,7 @@
                 <div class="card-body">
                     <!--You add title, then a text (short desc)-->
                     <h2 class="card-title">{{the_game.title}}</h2>
-                    <p class="card-text">{{the_game.short_description}}</p>
+                    <!-- <p class="card-text">{{the_game.short_description}}</p> -->
                     <!--when creating a card, price can be stated as a discount.-->
                     <div class="card-price">
                         {%if the_game.discount != 0%}
