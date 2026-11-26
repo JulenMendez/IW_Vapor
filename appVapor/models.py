@@ -81,8 +81,9 @@ class Game(models.Model):
     def name_from_url(game_url:str) -> str:
         return " ".join(game_url.split("-"))
 
-    # def get_current_price(self) -> int:
-    #     price_dicount:int = int(self.price * (self.discount/100))
+    def get_current_price(self) -> int:
+        price_dicount:int = int(self.price * ((100 - self.discount)/100))
+        return price_dicount
         
 
 

@@ -41,7 +41,7 @@ Esto es, si yo pongo en el buscador "Fallout", en vez de SEARCH, debería poner 
             <div class="discount-prices">
                 <span class="price-original format-price">{{n.price}}€</span>
                 <!--  Precio viejo-->
-                <span class="price-new format-price">{{n.price}}€</span>
+                <span class="price-new format-price">{{n.get_current_price}}€</span>
                 <!-- Precio nuevo -->
             </div>
                 <a href="{% url 'game' n.get_url_name %}" class="btn btn-card">Comprar</a> 
