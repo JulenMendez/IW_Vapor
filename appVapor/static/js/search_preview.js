@@ -1,11 +1,8 @@
 $(document).ready(function() {
     $('#search').bind("input", function() {
-        // let text = $(this).value;
         if (document.getElementById('search').value == "") {
-            //No mostramos nada
             $('.search-preview').remove();
         } else {
-            //Llamada ajax
             $.ajax({
                 type: "GET",
                 async: true,
