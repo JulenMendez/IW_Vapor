@@ -1,11 +1,11 @@
 $(document).ready(function() {
-    $('.format-price').each(format);
+    $('.format-price').each(formatPrice);
 });
 
 
 
 
-function format() {
+function formatPrice() {
     var text = $(this).text();
     var limit = text.length - 3;
     var newText = text.substring(0, limit) + "." + text.substring(limit);
