@@ -41,7 +41,7 @@
                     <!--when creating a card, price can be stated as a discount.-->
                     <div class="card-price">
                         {%if the_game.discount != 0%}
-                            <div class="card-price-discount">{{the_game.discount}}</div> <!--discount-->
+                            <div class="card-price-discount">-{{the_game.discount}}%</div> <!--discount-->
                             <div class="card-discount-prices">
                                 <span class="card-price-original format-price">{{the_game.price}}€</span> <!--original price-->
                                 <span class="card-price-new format-price">{{the_game.get_current_price}}€</span> <!--discounted price-->
