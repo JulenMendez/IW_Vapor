@@ -1,0 +1,165 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-27 18:46+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? "
+"1 : 2;\n"
+#: .\templates\shop\base_shop.html:26
+msgid "Categories"
+msgstr "Categorias"
+
+#: .\templates\shop\base_shop.html:30
+msgid "Gameplay"
+msgstr "Gameplay"
+
+#: .\templates\shop\base_shop.html:31
+msgid "Free to play"
+msgstr "Free to play"
+
+#: .\templates\shop\base_shop.html:33
+msgid "Un jugador"
+msgstr "Un jugador"
+
+#: .\templates\shop\base_shop.html:34
+msgid "Multijugador"
+msgstr "Multijugador"
+
+#: .\templates\shop\base_shop.html:35
+msgid "Cooperativos en linea"
+msgstr "Cooperativos en linea"
+
+#: .\templates\shop\base_shop.html:36
+msgid "Basados en equipo"
+msgstr "Basados en equipo"
+
+#: .\templates\shop\base_shop.html:38
+msgid "Primera persona"
+msgstr "Primera persona"
+
+#: .\templates\shop\base_shop.html:39
+msgid "Tercera persona"
+msgstr "Tercera persona"
+
+#: .\templates\shop\base_shop.html:41
+msgid "FPS"
+msgstr "FPS"
+
+#: .\templates\shop\base_shop.html:42
+msgid "Puzles"
+msgstr "Puzles"
+
+#: .\templates\shop\base_shop.html:43
+msgid "Rol"
+msgstr "Rol"
+
+#: .\templates\shop\base_shop.html:44
+msgid "Tipo Dark Souls"
+msgstr "Tipo Dark Souls"
+
+#: .\templates\shop\base_shop.html:45
+msgid "Novelas visuales"
+msgstr "Novelas visuales"
+
+#: .\templates\shop\base_shop.html:48
+msgid "Temática"
+msgstr "Temática"
+
+#: .\templates\shop\base_shop.html:49
+msgid "Ciencia ficción"
+msgstr "Ciencia ficción"
+
+#: .\templates\shop\base_shop.html:50
+msgid "Posapocalipticos"
+msgstr "Posapocalipticos"
+
+#: .\templates\shop\base_shop.html:51
+msgid "Aventura"
+msgstr "Aventura"
+
+#: .\templates\shop\base_shop.html:52
+msgid "Terror"
+msgstr "Terror"
+
+#: .\templates\shop\base_shop.html:54
+msgid "Disparos"
+msgstr "Disparos"
+
+#: .\templates\shop\base_shop.html:55
+msgid "Acción"
+msgstr "Acción"
+
+#: .\templates\shop\base_shop.html:56
+msgid "Buena trama"
+msgstr "Buena trama"
+
+#: .\templates\shop\base_shop.html:58
+msgid "Plataformas"
+msgstr "Plataformas"
+
+#: .\templates\shop\base_shop.html:59
+msgid "Plataformas 3D"
+msgstr "Plataformas 3D"
+
+#: .\templates\shop\base_shop.html:60
+msgid "Plataforma de puzles"
+msgstr "Plataforma de puzles"
+
+#: .\templates\shop\base_shop.html:62
+msgid "Protagonista femenino"
+msgstr "Protagonista femenino"
+
+#: .\templates\shop\base_shop.html:63
+msgid "LGBTQ+"
+msgstr "LGBTQ+"
+
+#: .\templates\shop\base_shop.html:68
+msgid "Devs"
+msgstr "Devs"
+
+
+
+#: .\templates\shop\base_shop.html:72
+msgid "Vapor"
+msgstr "Vapor"
+
+#: .\templates\shop\base_shop.html:73
+msgid "Konami"
+msgstr "Konami"
+
+#: .\templates\shop\base_shop.html:74
+msgid "Bethesda"
+msgstr "Bethesda"
+
+#: .\templates\shop\base_shop.html:75
+msgid "FromSoftware"
+msgstr "FromSoftware"
+
+#: .\templates\shop\base_shop.html:76
+msgid "Team Cherry"
+msgstr "Team Cherry"
+
+#: .\templates\shop\base_shop.html:77
+msgid "Toge Productions"
+msgstr "Toge Productions"
+
+#: .\templates\shop\base_shop.html:78
+msgid "Deconstructeam"
+msgstr "Deconstructeam"
+
+#: .\templates\shop\base_shop.html:79
+msgid "Capcom"
+msgstr "Capcom"

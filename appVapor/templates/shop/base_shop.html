@@ -2,6 +2,8 @@
 
 {% load static %}
 
+{% load i18n %}
+
 {% block js %}
 
 <script type="text/javascript" src="{% static 'js/jquery.js' %}"></script>
@@ -21,60 +23,60 @@
             <!--MENU BAR-->
             <div class="menubar">
                 <div class="menubar-item">
-                    <p class="menubar-link">Categories</p>
+                    <p class="menubar-link">{%translate "Categories"%}</p>
                     
                     <div class="menubar-dropdown menubar-dropdown-grid">
                         <div class="dropdown-grid-item">
-                            <h4 class="dropdown-subheader">Gameplay</h4>
-                            <a href="{% url "category" "free-to-play"%}" class="dropdown-link">Free to play</a>
+                            <h4 class="dropdown-subheader">{%translate "Gameplay"%}</h4>
+                            <a href="{% url "category" "free-to-play"%}" class="dropdown-link">{%translate "Free to play"%}</a>
                             <div class="dropdown-divider"></div>
-                            <a href="{% url "category" "un-jugador"%}" class="dropdown-link">Un jugador</a>
-                            <a href="{% url "category" "multijugador"%}" class="dropdown-link">Multijugador</a>
-                            <a href="{% url "category" "cooperativos-en-linea"%}" class="dropdown-link">Cooperativos en linea</a>
-                            <a href="{% url "category" "basados-en-equipo"%}" class="dropdown-link">Basados en equipo</a>
+                            <a href="{% url "category" "un-jugador"%}" class="dropdown-link">{%translate "Un jugador"%}</a>
+                            <a href="{% url "category" "multijugador"%}" class="dropdown-link">{%translate "Multijugador"%}</a>
+                            <a href="{% url "category" "cooperativos-en-linea"%}" class="dropdown-link">{%translate "Cooperativos en linea"%}</a>
+                            <a href="{% url "category" "basados-en-equipo"%}" class="dropdown-link">{%translate "Basados en equipo"%}</a>
                             <div class="dropdown-divider"></div>
-                            <a href="{% url "category" "primera-persona"%}" class="dropdown-link">Primera persona</a>
-                            <a href="{% url "category" "tercera-persona"%}" class="dropdown-link">Tercera persona</a>
+                            <a href="{% url "category" "primera-persona"%}" class="dropdown-link">{%translate "Primera persona"%}</a>
+                            <a href="{% url "category" "tercera-persona"%}" class="dropdown-link">{%translate "Tercera persona"%}</a>
                             <div class="dropdown-divider"></div>
-                            <a href="{% url "category" "fps"%}" class="dropdown-link">FPS</a>
-                            <a href="{% url "category" "puzles"%}" class="dropdown-link">Puzles</a>
-                            <a href="{% url "category" "rol"%}" class="dropdown-link">Rol</a>
-                            <a href="{% url "category" "tipo-dark-souls"%}" class="dropdown-link">Tipo Dark Souls</a>
-                            <a href="{% url "category" "novelas-visuales"%}" class="dropdown-link">Novelas visuales</a>
+                            <a href="{% url "category" "fps"%}" class="dropdown-link">{%translate "FPS"%}</a>
+                            <a href="{% url "category" "puzles"%}" class="dropdown-link">{%translate "Puzles"%}</a>
+                            <a href="{% url "category" "rol"%}" class="dropdown-link">{%translate "Rol"%}</a>
+                            <a href="{% url "category" "tipo-dark-souls"%}" class="dropdown-link">{%translate "Tipo Dark Souls"%}</a>
+                            <a href="{% url "category" "novelas-visuales"%}" class="dropdown-link">{%translate "Novelas visuales"%}</a>
                         </div>
                         <div class="dropdown-grid-item">
-                            <h4 class="dropdown-subheader">Temática</h4>
-                            <a href="{% url "category" "ciencia-ficcion"%}" class="dropdown-link">Ciencia ficción</a>
-                            <a href="{% url "category" "posapocalipticos"%}" class="dropdown-link">Posapocalipticos</a>
-                            <a href="{% url "category" "aventura"%}" class="dropdown-link">Aventura</a>
-                            <a href="{% url "category" "terror"%}" class="dropdown-link">Terror</a>
+                            <h4 class="dropdown-subheader">{% translate "Temática" %}</h4>
+                            <a href="{% url "category" "ciencia-ficcion"%}" class="dropdown-link">{% translate "Ciencia ficción" %}</a>
+                            <a href="{% url "category" "posapocalipticos"%}" class="dropdown-link">{% translate "Posapocalipticos" %}</a>
+                            <a href="{% url "category" "aventura"%}" class="dropdown-link">{% translate "Aventura" %}</a>
+                            <a href="{% url "category" "terror"%}" class="dropdown-link">{% translate "Terror" %}</a>
                             <div class="dropdown-divider"></div>
-                            <a href="{% url "category" "disparos"%}" class="dropdown-link">Disparos</a>
-                            <a href="{% url "category" "accion"%}" class="dropdown-link">Acción</a>
-                            <a href="{% url "category" "buena-trama"%}" class="dropdown-link">Buena trama</a>
+                            <a href="{% url "category" "disparos"%}" class="dropdown-link">{% translate "Disparos" %}</a>
+                            <a href="{% url "category" "accion"%}" class="dropdown-link">{% translate "Acción" %}</a>
+                            <a href="{% url "category" "buena-trama"%}" class="dropdown-link">{% translate "Buena trama" %}</a>
                             <div class="dropdown-divider"></div>
-                            <a href="{% url "category" "plataformas"%}" class="dropdown-link">Plataformas</a>
-                            <a href="{% url "category" "plataformas-3d"%}" class="dropdown-link">Plataformas 3D</a>
-                            <a href="{% url "category" "plataforma-de-puzles"%}" class="dropdown-link">Plataforma de puzles</a>
+                            <a href="{% url "category" "plataformas"%}" class="dropdown-link">{% translate "Plataformas" %}</a>
+                            <a href="{% url "category" "plataformas-3d"%}" class="dropdown-link">{%translate "Plataformas 3D"%}</a>
+                            <a href="{% url "category" "plataforma-de-puzles"%}" class="dropdown-link">{%translate "Plataforma de puzles"%}</a>
                             <div class="dropdown-divider"></div>
-                            <a href="{% url "category" "protagonista-femenina"%}" class="dropdown-link">Protagonista femenino</a>
-                            <a href="{% url "category" "lgbtq+"%}" class="dropdown-link">LGBTQ+</a>
+                            <a href="{% url "category" "protagonista-femenina"%}" class="dropdown-link">{%translate "Protagonista femenino"%}</a>
+                            <a href="{% url "category" "lgbtq+"%}" class="dropdown-link">{%translate "LGBTQ+"%}</a>
                         </div>
                     </div>
                 </div>
                 <div class="menubar-item">
-                    <a href="#" class="menubar-link">Devs</a>
+                    <a href="#" class="menubar-link">{%translate "Devs"%}</a>
                     <div class="menubar-dropdown menubar-dropdown-grid">
                         <div class="dropdown-grid-item">
-                            <h4 class="dropdown-subheader">Subheader</h4>
-                            <a href="{% url "dev" "vapor"%}" class="dropdown-link">Vapor</a>
-                            <a href="{% url "dev" "konami"%}" class="dropdown-link">Konami</a>
-                            <a href="{% url "dev" "bethesda"%}" class="dropdown-link">Bethesda</a>
-                            <a href="{% url "dev" "fromsoftware"%}" class="dropdown-link">FromSoftware</a>
-                            <a href="{% url "dev" "team-cherry"%}" class="dropdown-link">Team Cherry</a>
-                            <a href="{% url "dev" "toge-productions"%}" class="dropdown-link">Toge Productions</a>
-                            <a href="{% url "dev" "deconstructeam"%}" class="dropdown-link">Deconstructeam</a>
-                            <a href="{% url "dev" "capcom"%}" class="dropdown-link">Capcom</a>
+                            <h4 class="dropdown-subheader">{%translate "Devs"%}</h4>
+                            <a href="{% url "dev" "vapor"%}" class="dropdown-link">{%translate "Vapor"%}</a>
+                            <a href="{% url "dev" "konami"%}" class="dropdown-link">{%translate "Konami"%}</a>
+                            <a href="{% url "dev" "bethesda"%}" class="dropdown-link">{%translate "Bethesda"%}</a>
+                            <a href="{% url "dev" "fromsoftware"%}" class="dropdown-link">{%translate "FromSoftware"%}</a>
+                            <a href="{% url "dev" "team-cherry"%}" class="dropdown-link">{%translate "Team Cherry"%}</a>
+                            <a href="{% url "dev" "toge-productions"%}" class="dropdown-link">{%translate "Toge Productions"%}</a>
+                            <a href="{% url "dev" "deconstructeam"%}" class="dropdown-link">{%translate "Deconstructeam"%}</a>
+                            <a href="{% url "dev" "capcom"%}" class="dropdown-link">{%translate "Capcom"%}</a>
                         </div>
                     </div>
                 </div>
