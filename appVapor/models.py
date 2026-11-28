@@ -1,5 +1,5 @@
 from django.db import models
-import math
+import math, os
 
 # Create your models here.
 class Tag(models.Model):
@@ -85,6 +85,22 @@ class Game(models.Model):
         price_dicount:int = int(self.price * ((100 - self.discount)/100))
         return price_dicount
         
+    def get_carousel_names(self) -> list[str]:
+        image_dir:str = self.get_image_name()
+        carousel_path:str = os.path.join("appVapor", "static", "images", "Carrusel")
+        result:list[str] = []
 
+        exist:bool = True
+        i:int = 0
+        while(exist):
+            image_name:str = f"{image_dir}{i}"
+            exist = os.path.exists(os.path.join(carousel_path, image_dir, f"{image_name}.jpg"))
+
+            if (exist):
+                result.append(image_name)
+
+            i += 1
+
+        return result
 
 

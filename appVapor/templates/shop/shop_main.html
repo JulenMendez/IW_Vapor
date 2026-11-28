@@ -16,7 +16,7 @@
         <div class="container mb-40">
             <div class="banner mb-40">
                 <h1>BIG SALE!</h1>
-                <a href="{{big_sales.get_url_name}}"> <!--Change this for the final url destination-->
+                <a href="{% url 'game' big_sales.get_url_name %}"> <!--Change this for the final url destination-->
                     {%with "images/HorizontalCover/"|add:big_sales.get_image_name|add:".jpg" as image_static%}
                         <img src={% static image_static %} alt="banner img" id="bigOffer">
                     {%endwith%}
@@ -30,7 +30,7 @@
             <div class="card desc-tooltip">
             {%with games_list|index:forloop.parentloop.counter0|index:forloop.counter0 as the_game%}
                 {%with "images/VerticalCover/"|add:the_game.get_image_name|add:".jpg" as image_static%}
-                <a href="./games/{{the_game.get_url_name}}"> <!--Link to the game-->
+                <a href="{% url 'game' the_game.get_url_name %}"> <!--Link to the game-->
                     <img src={%static image_static%} alt="Card Image" class="card-img"> <!--image of the game-->
                 </a>
                 {%endwith%}

@@ -2,6 +2,10 @@
 
 {% load static %}
 
+{% block jsShop %}
+<script type="text/javascript" src="{% static 'js/carousel.js' %}"></script>
+{% endblock jsShop %}
+
 {% block title %}{{game.title}}{% endblock title%}
 
 {%block pageBody%}
@@ -10,14 +14,19 @@
 
     <div class="categoryContainer">
         <div class="gameStorePage">
-            <div class="carrusel">
-                <a href="#">
-                    {%with "images/Carrusel/"|add:game.get_image_name|add:"/"|add:game.get_image_name|add:"0"|add:".jpg" as image_static%}
+            
+            <div class="carousel">    
+                <button class="carousel-previous">Back</button>
+                {% for name in game.get_carousel_names %}
+                <div class="carousel-slide carousel-container">
+                    {%with "images/Carrusel/"|add:game.get_image_name|add:"/"|add:name|add:".jpg" as image_static%}
                         <img src={% static image_static %} alt="banner img" class="bigImageStoreGame">
                     {%endwith%}
-                    <!-- La foto del juego que sea para el carrusel--> <!--HACER LO DE STATIC CUANDO SE PONGAN LAS FOTOS-->
-                </a>
+                </div>
+                {%endfor%}
+                <button class="carousel-next">Next</button>
             </div>
+            
             <div class="derecha">
                 <div>
                     <a href="#">
